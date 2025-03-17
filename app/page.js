@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Footer from "./component/Footer";
-import ComA from "./component/ComA";
 
 export default function Home() {
   return (
@@ -54,7 +53,6 @@ export default function Home() {
         </div>
       </main>
       <Footer/>
-      <ComA/>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
