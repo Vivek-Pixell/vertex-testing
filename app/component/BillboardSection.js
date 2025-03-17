@@ -42,7 +42,7 @@ export default function BillboardSection() {
               businesses
             </p>
 
-            <button className="flex justify-center items-center border gap-2 px-4 py-3 rounded-full text-black hover:bg-blue-600 cursor-pointer">
+            <button className="flex m justify-center mx-auto md:mx-0 bg-green-500 items-center border gap-2 px-4 md:justify-start py-3 rounded-full text-black hover:bg-green-600 cursor-pointer">
               <span className=" text-xl font-bold">About Vertex <TrendingFlatIcon/></span>
             </button>
           </div>
