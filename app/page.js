@@ -6,7 +6,8 @@ import ImageGrid from "./component/ImageGrid";
 import BillboardSection from "./component/BillboardSection";
 import ImageSignage from "./component/ImageSignage";
 import PartnersShowcase from "./component/PartnersShowcase";
-
+import TestimonialsSection from "./component/TestimonialsSection";
+import BlogSection from "./component/BlogSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <BillboardSection/>
       <ImageSignage/>
       <PartnersShowcase/>
+      <TestimonialsSection/>
+      <BlogSection/>
 
       <Footer/>
 
