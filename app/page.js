@@ -8,6 +8,7 @@ import ImageSignage from "./component/ImageSignage";
 import PartnersShowcase from "./component/PartnersShowcase";
 import TestimonialsSection from "./component/TestimonialsSection";
 import BlogSection from "./component/BlogSection";
+import ContactForm from "./component/ContactForm";
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
       <PartnersShowcase/>
       <TestimonialsSection/>
       <BlogSection/>
+      <div className=" md:hidden p-4 m-2 border rounded-2xl bg-black text-white">
+        <ContactForm />
+      </div>
 
       <Footer/>
 

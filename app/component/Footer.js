@@ -1,4 +1,5 @@
 "use client";
+import ContactForm from "./ContactForm";
 
 import {
   Facebook,
@@ -70,13 +71,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact Form */}
-        {/* <div className="absolute -top-3/6 md:left-5/12 lg:left-6/12 xl:left-7/12 bg-[#111] p-6 md:p-8 rounded-xl border border-green-500 shadow-lg hidden md:block">
+        <div className="absolute -top-3/6 md:left-5/12 lg:left-6/12 xl:left-7/12 bg-[#111] p-6 md:p-8 rounded-xl border border-green-500 shadow-lg hidden md:block">
           <ContactForm />
-        </div> */}
+        </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="max-w-7xl mx-auto mt-16 py-8">
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-gray-400 text-sm">
           <p className="hidden md:block">
