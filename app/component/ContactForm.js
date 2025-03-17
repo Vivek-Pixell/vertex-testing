@@ -39,6 +39,8 @@ export default function ContactForm() {
     }
     if (!formData.message.trim()) newErrors.message = "Message is required.";
 
+    setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0; // ✅ Returns `true` if no errors
   };
 
