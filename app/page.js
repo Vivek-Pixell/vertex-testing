@@ -4,6 +4,8 @@ import ComA from "./component/ComA";
 import StatsSection from "./component/StatsSection";
 import ImageGrid from "./component/ImageGrid";
 import BillboardSection from "./component/BillboardSection";
+import ImageSignage from "./component/ImageSignage";
+import PartnersShowcase from "./component/PartnersShowcase";
 
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       <StatsSection/>
       <ImageGrid/>
       <BillboardSection/>
+      <ImageSignage/>
+      <PartnersShowcase/>
 
       <Footer/>
 
