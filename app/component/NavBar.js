@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" flex justify-center sticky z-50 bg-transparent transition-all duration-300 p-4 mx-auto">
+    <nav className=" flex justify-center sticky z-50 bg-transparent transition-all duration-300 p-10 mx-auto">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         {/* <div className="text-white text-xl font-bold">
@@ -13,12 +13,12 @@ const Navbar = () => {
         </div> */}
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-center mx-auto space-x-12">
+        <div className="hidden md:flex justify-center mx-auto space-x-24">
           {["Home", "Work", "Products", "About Us"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-white text-xl hover:text-gray-300 transition"
+              className="text-white text-md font-normal hover:text-gray-300 transition"
             >
               {item}
             </a>

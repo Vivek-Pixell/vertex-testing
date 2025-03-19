@@ -21,7 +21,7 @@ const services= [
   },
 
   {
-    title: "Urban Landing Lightning",
+    title: "Urban Landing",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Custom-made architectural elements",
@@ -36,18 +36,18 @@ const services= [
 
 export default function ImageGrid() {
   return (
-    <div className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-24 m-auto ">
+    <div className="w-full py-12 md:pt-24 lg:pt-32">
+      <div className="px-4 md:px-32 ">
         <div className="space-y-2 flex flex-col ">
-          <h4 className=" font-bold text-green-600">TESTIMONIALS</h4>
-          <h2 className=" md:text-5xl text-3xl font-bold tracking-tight text-gray-900">
+          <p className=" text-md md:text-2xl leading-5 font-medium text-[#5EB652] tracking-[0.85px]">TESTIMONIALS</p>
+          <h2 className=" md:text-4xl lg:text-5xl xl:text-6xl text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">
             What We Offer To Our <br /> Clients
           </h2>
         </div>
-        <div className=" grid grid-cols-1 py-12 md:grid-cols-5">
+        <div className=" grid grid-cols-1 w-full justify-center py-8 lg:grid-cols-5 mx-auto">
           {services.map((service, index) => (
             <div key={index} className="group relative cursor-pointer ">
-              <div className="aspect-[2/3]  overflow-hidden">
+              <div className="aspect-[2/3]   overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -57,12 +57,12 @@ export default function ImageGrid() {
                 <div className="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-all duration-500" />
               </div>
               <div className="absolute bottom-0 left-0 right-0  p-4 transform group-hover:scale-110 transition-transform duration-500">
-                <h3 className="text-lg font-semibold text-center text-white">
+              <h3 className="text-lg md:text-3xl lg:text-lg 2xl:text-3xl font-medium text-white">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm text-gray-300 text-center hidden group-hover:block">
+                {/* <p className="mt-2 text-sm text-gray-300 hidden group-hover:block">
                   {service.description}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

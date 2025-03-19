@@ -23,33 +23,55 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section className=" mt-16 md:mt-24">
-      <div className=" mx-auto px-4 md:px-24 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className=" mt-12 md:mt-16">
+      <div className=" mx-auto px-4 md:px-24 lg:px-32 ">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] xl:grid-cols-[35%_65%] 2xl:grid-cols-[30%_70%] gap-12 items-center">
           {/* Left Column */}
-          <div className="space-y-6">
-            <p className="text-gray-600">
-              <span className=" text-md font-bold text-black">
-                VERTEX
+          <div className="space-y-6 md:py-6">
+            <p className="text-black md:text-xl xl:text-xl 2xl:text-2xl">
+              <span className=" text-md font-medium text-black">
+                Vertex
                 <HorizontalRuleIcon sx={{ paddingBottom: "2px" }} />
               </span>
               Lorem ipsum dolor sit amet consectetur. Ipsum aliquet commodo
               tortor fermentum laoreet pretium.
             </p>
-            <p className="text-gray-600 text-justify">
+            <p className="text-black text-justify md:text-xl  xl:text-xl 2xl:text-2xl  ">
               Adipiscing fermentum odio quisque ultrices nunc turpis nisi
               vulputate eros. In non volutpat pharetra nulla vitae fermentum.
               Semper tellus feugiat sit pellentesque scelerisque hendrerit
               vulputate quam nunc.
             </p>
-            <button className="flex items-center text-[#175177] font-semibold cursor-pointer">
+            <button className="flex items-center text-[#175177] font-semibold cursor-pointer md:text-xl  xl:text-xl 2xl:text-2xl gap-1">
               <span>
                 More about us{" "}
-                <TrendingFlatIcon
-                  className="hover:translate-x-3 "
-                  fontSize="medium"
-                />
+                
               </span>
+              <svg
+                width="55"
+                height="13"
+                viewBox="0 0 55 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_179_9)">
+                  <path
+                    d="M1.4191 6.54758H53.2977M53.2977 6.54758L48.2919 11.5534M53.2977 6.54758L48.2919 1.54175"
+                    stroke="#175177"
+                    strokeWidth="0.910151"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_179_9">
+                    <rect
+                      width="53.6989"
+                      height="11.832"
+                      fill="white"
+                      transform="translate(0.508942 0.631592)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </button>
           </div>
 
@@ -79,7 +101,7 @@ export default function StatsSection() {
                 animate={{ opacity: 1, y: -15 }}
                 exit={{ opacity: 0, y: -60 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-semibold text-black text-center drop-shadow-xl"
+                className="text-4xl md:text-5xl xl:text-[2.74rem] 2xl:text-7xl font-semibold text-black text-center drop-shadow-xl"
               >
                 {headings[currentHeading]}
               </motion.h3>

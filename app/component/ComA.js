@@ -11,7 +11,6 @@ const ComA = () => {
     "/videos/video1.mp4",
     "/videos/video2.mp4",
     "/videos/video3.mp4",
-    
   ];
 
   // Auto-rotate carousel
@@ -24,7 +23,7 @@ const ComA = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-[83vh] xl:h-screen overflow-hidden">
       {/* Video Carousel Background */}
       {carouselVideos.map((vid, index) => (
         <div
@@ -51,40 +50,51 @@ const ComA = () => {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-16">
+      <div className="relative z-10 mb-5 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-16">
         <div className="">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-2">
-            Heading
-          </h1>
-          <p className="text-lg md:text-xl text-white opacity-90 mb-6">
-            Sub heading
-          </p>
+          <div className=" px-8 my-4">
+            <h1 className="text-4xl md:text-5xl lg:text-[70px] text-white font-semibold mb-4">
+              Heading
+            </h1>
+            <p className="text-sm text-white font-light mt-2 mb-8">Sub heading</p>
+            <div className="flex items-center gap-2">
+              <a
+                href="#details"
+                className="text-white text-sm md:text-base font-normal hover:text-gray-300 transition"
+              >
+                More details
+              </a>
 
-          <div className="flex items-center">
-            <a
-              href="#details"
-              className="text-white text-sm md:text-base hover:text-gray-300 transition"
-            >
-              More details
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-2 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+              <svg
+                width="55"
+                height="13"
+                viewBox="0 0 55 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_179_9)">
+                  <path
+                    d="M1.4191 6.54758H53.2977M53.2977 6.54758L48.2919 11.5534M53.2977 6.54758L48.2919 1.54175"
+                    stroke="white"
+                    strokeWidth="0.910151"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_179_9">
+                    <rect
+                      width="53.6989"
+                      height="11.832"
+                      fill="white"
+                      transform="translate(0.508942 0.631592)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
           </div>
 
           {/* Carousel indicators */}
-          <div className="flex justify-center space-x-2 m-4">
+          <div className="flex justify-center space-x-2 mb-16 md:mb-12">
             {carouselVideos.map((_, index) => (
               <button
                 key={index}

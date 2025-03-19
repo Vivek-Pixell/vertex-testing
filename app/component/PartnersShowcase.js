@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo1 from "../../public/icons/Vector1.svg";
 import logo2 from "../../public/icons/Vector2.svg";
@@ -17,11 +17,24 @@ const partners = [
 ];
 
 const PartnersShowcase = () => {
+
+  const [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setRotation(scrollY); // Keeps rotation within 360 degrees
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="py-16 px-4 md:px-24">
+    <section className="py-16 px-4 md:px-32">
       <div className="container mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-gray-800 text-lg md:text-xl mb-12">
+        <h2 className="text-gray-800 text-lg md:text-xl mb-8">
           Join Over 150+ Companies Who Trust Vertex
         </h2>
 
@@ -37,9 +50,10 @@ const PartnersShowcase = () => {
                 alt={partner.name}
                 width={40}
                 height={40}
-                className="object-contain"
+                className=" object-contain transition-transform duration-300 ease-linear"
+                style={{ transform: `rotate(${rotation}deg)` }} 
               />
-              <h3 className="font-semibold text-xl pb-2 text-gray-700">
+              <h3 className="font-bold text-xl pb-2 text-black">
                 {partner.name}
               </h3>
             </div>

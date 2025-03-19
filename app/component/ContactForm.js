@@ -103,7 +103,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="">
+    <div className=" lg:px-6">
       <h3 className="text-2xl font-semibold mb-6">Send Your Enquiry</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,7 +111,7 @@ export default function ContactForm() {
             <input
               type="text"
               placeholder="First Name"
-              className="bg-transparent border w-full border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+              className="bg-transparent border w-full placeholder-white placeholder:font-light border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
               value={formData.firstName}
               onChange={(e) =>
                 setFormData({ ...formData, firstName: e.target.value })
@@ -125,7 +125,7 @@ export default function ContactForm() {
             <input
               type="text"
               placeholder="Last Name"
-              className="bg-transparent border w-full border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+              className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
               value={formData.lastName}
               onChange={(e) =>
                 setFormData({ ...formData, lastName: e.target.value })
@@ -141,7 +141,7 @@ export default function ContactForm() {
             <input
               type="email"
               placeholder="Email Address"
-              className="bg-transparent border w-full border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+              className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -155,7 +155,7 @@ export default function ContactForm() {
             <input
               type="tel"
               placeholder="Phone Number"
-              className="bg-transparent border w-full border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+              className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
               value={formData.phone}
               onChange={(e) => {
                 const onlyNumbers = e.target.value.replace(/\D/g, ""); // Allow only numbers
@@ -173,7 +173,7 @@ export default function ContactForm() {
           <textarea
             placeholder="Write Message"
             rows={4}
-            className="w-full bg-transparent border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+            className="w-full bg-transparent border placeholder-white placeholder:font-light border-gray-700 rounded-lg p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
@@ -185,7 +185,7 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-full relative bg-green-500 text-white py-3 rounded-full hover:bg-green-600 transition-colors flex items-center justify-center group shadow-md cursor-pointer"
+          className="w-full relative bg-green-500 text-black py-3 rounded-full hover:bg-green-600 transition-colors flex items-center justify-center group shadow-md cursor-pointer"
           disabled={isLoading}
         >
           <span className="text-lg font-semibold">

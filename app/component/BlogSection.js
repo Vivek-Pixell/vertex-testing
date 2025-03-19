@@ -13,7 +13,7 @@ const blogPosts = [
     date: "May 19, 2023",
     author: "Mesbah",
     comments: "Comments (05)",
-    title: "Innovate, Create, Inspire: Bring Your Brand to Life",
+    title: "Innovate  Create  Inspire  your brand to life in ",
     imageUrl:
       "https://images.unsplash.com/photo-1712847333437-f9386beb83e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGh1bWFufGVufDB8fDB8fHww",
   },
@@ -21,7 +21,7 @@ const blogPosts = [
     date: "May 19, 2023",
     author: "Mesbah",
     comments: "Comments (05)",
-    title: "What Services Does Your Billboard Company Offer?",
+    title: "Services does your billboard company offer",
     imageUrl:
       "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=2069",
   },
@@ -29,7 +29,7 @@ const blogPosts = [
     date: "May 19, 2023",
     author: "Mesbah",
     comments: "Comments (05)",
-    title: "What Types of Billboards Are Available?",
+    title: "Types of billboards do you have available",
     imageUrl:
       "https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=2000",
   },
@@ -38,18 +38,18 @@ const blogPosts = [
 export default function BlogSection() {
   console.log("com", comnt);
   return (
-    <section className="py-24 ">
-      <div className=" px-4 md:px-24 ">
+    <section className="py-12 ">
+      <div className=" px-4 md:px-32 ">
         {/* Section Header */}
-        <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 mb-20">
-          <div>
-            <h3 className=" font-bold text-green-600">LATEST BLOG</h3>
-            <h2 className="md:text-5xl text-3xl font-bold tracking-tight text-gray-900">
+        <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 mb-4 md:p-8">
+          <div className=" space-y-3">
+            <h3 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">LATEST BLOG</h3>
+            <h2 className=" md:text-4xl lg:text-6xl text-3xl font-normal tracking-tight leading-[65px] text-gray-900">
               Where The Beat Meets Business Billboard
             </h2>
           </div>
-          <div className=" flex items-center">
-            <p className="text-gray-600 leading-relaxed">
+          <div className=" flex items-center md:p-10">
+            <p>
               Billboard advertising is a powerful marketing too businesBillboard
               advertising is a powerful marketing tool that he businesses gain
               visibility and reach their target audienceses
@@ -58,7 +58,7 @@ export default function BlogSection() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
           {blogPosts.map((post, index) => (
             <div
               key={index}
@@ -84,27 +84,28 @@ export default function BlogSection() {
                         alt="UserIcon"
                         className="w-4 h-4"
                       />
-                      <span className=" text-[16px]">{post.author}</span>
+                      <span className=" text-[16px] text-black">{post.author}</span>
                     </div>
                     <div className="flex space-x-2 items-center cursor-pointer">
                       <img src={comnt.src} alt="UserIcon" className="w-4 h-4" />
-                      <span className=" text-[16px]">{post.comments}</span>
+                      <span className=" text-[16px] text-black">{post.comments}</span>
                     </div>
                   </div>
                   <div className=" bg-[#175177] rounded-3xl absolute -right-5 -top-12 flex items-center space-x-2 text-white px-4 py-1 cursor-pointer">
-                    <CalendarMonth className="w-5 h-5" />
+                    
+                    <CalendarMonth className="w-4 h-4 p-1 text-yellow-200" />
                     <span>{post.date}</span>
                   </div>
                 </div>
 
                 {/* Blog Title */}
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h3 className="text-2xl font-medium text-black mb-6">
                   {post.title}
                 </h3>
 
                 {/* Read More Button */}
                 <button className="inline-flex items-center text-black hover:text-gray-700 transition-all cursor-pointer">
-                  <span className="mr-2 font-medium py-2 px-4 rounded-3xl border bg-white">
+                  <span className="mr-2 font-medium py-2 px-4 rounded-3xl border border-gray-300 bg-white">
                     Read More <ArrowForward sx={{ width: 15, height: 15 }} />
                   </span>
                 </button>

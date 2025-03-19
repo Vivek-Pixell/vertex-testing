@@ -12,7 +12,7 @@ export default function BillboardSection() {
       <div className=" px-4 md:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 items-center">
           {/* Left Column - Image */}
-          <div className="relative rounded-3xl">
+          <div className="relative rounded-3xl lg:p-8 ">
             <Image
               src={billboard} // ✅ Uses Next.js Image for optimization
               alt="Digital Billboard"
@@ -21,18 +21,18 @@ export default function BillboardSection() {
           </div>
 
           {/* Right Column - Content */}
-          <div className="space-y-6 ">
+          <div className="">
             <div>
-              <h4 className="text-green-600  font-bold tracking-wider uppercase">
+              <h4 className="text-md leading-[70px] font-medium text-[#5EB652] tracking-[0.75px] uppercase">
                 Why Choose Us
               </h4>
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-15 font-normal tracking-tight text-gray-900">
               The Digi Cybsecure The Transfor Billbord
             </h2>
 
-            <p className="text-gray-600 py-6 text-justify">
+            <p className="text-gray-500 font-light py-6 text-justify">
               Billboard advertising is a powerful marketing tool that he
               businesses gain visibility and reach their target audience
               Billboard advertising is a powerful marketing tool that he
@@ -42,8 +42,8 @@ export default function BillboardSection() {
               businesses
             </p>
 
-            <button className="flex m justify-center mx-auto md:mx-0 bg-green-500 items-center border gap-2 px-4 md:justify-start py-3 rounded-full text-black hover:bg-green-600 cursor-pointer">
-              <span className=" text-xl font-bold">About Vertex <TrendingFlatIcon/></span>
+            <button className="flex justify-center lg:justify-start items-center border gap-2 p-6 transition-all duration-400 py-3 rounded-full text-black hover:border-none hover:bg-[#175177] hover:text-white cursor-pointer">
+              <span className=" text-md font-normal">About Vertex <TrendingFlatIcon/></span>
             </button>
           </div>
         </div>

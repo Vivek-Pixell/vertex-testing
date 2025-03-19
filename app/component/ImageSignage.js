@@ -13,7 +13,7 @@ const images = [
   "/images/sinage4.webp",
 ];
 
-const gridSizes = [4, 8, 8, 4]; // Define alternating sizes
+const gridSizes = [4.5, 7.5, 7.5, 4.5]; // Define alternating sizes
 
 export default function ImageSignage() {
   return (
@@ -26,7 +26,7 @@ export default function ImageSignage() {
               item
               xs={12}
               md={gridSizes[index]}
-              sx={{ height: "400px", width: "100%", borderRadius: "30px" }}
+              sx={{ height: "420px", width: "100%", borderRadius: "30px" }}
             >
               <Paper
                 sx={{
@@ -58,20 +58,21 @@ export default function ImageSignage() {
                   className="hover-content"
                   sx={{
                     justifyContent: "center",
-                    borderRadius: "10px",
+                    borderRadius: "14px",
                     width: "98%",
                     backgroundColor: "white",
-                    padding: 2,
+                    padding: 4,
                     margin: 2,
                     opacity: 0,
                     transform: "translateY(100%)",
                     transition: "all 0.5s ease-in-out",
                   }}
                 >
-                  <Typography variant="body2" color="textSecondary">
+                  <Typography variant="body2" sx={{color: "black", paddingBottom: "15px", display: "flex", alignItems: "center"}}>
                     Transform Billboard
+                    <div className="flex-1 border-b ml-1 border-black max-w-[40px]"></div>
                   </Typography>
-                  <Typography fontWeight="semibold">
+                  <Typography fontWeight="bold">
                     Outdoor The Most Advertising
                   </Typography>
                 </Box>

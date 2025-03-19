@@ -27,3 +27,26 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+
+// import { Jost } from "next/font/google";
+
+// const jost = Jost({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "500", "600", "700", "800", "900"],
+//   variable: "--font-jost", // Custom CSS variable
+// });
+
+// export const metadata = {
+//   title: "My Next.js App",
+//   description: "Using Jost font in Next.js",
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" className={jost.variable}>
+//       <body className="font-jost">{children}</body>
+//     </html>
+//   );
+// }
