@@ -53,23 +53,23 @@ const TestimonialsSection = () => {
 
   return (
     <section className=" py-8 px-4 md:px-40">
-      <div className="container ">
-        <div className=" md:w-1/2 mb-6">
+      <div className="container">
+        <div className=" lg:w-1/2 mb-6">
           <div className="mb-6">
             <h4 className="text-md leading-2 font-semibold text-[#5EB652] tracking-[1.05px]">
               TESTIMONIALS
             </h4>
           </div>
           <div>
-            <h2 className="md:text-4xl lg:text-5xl text-3xl font-normal tracking-tight leading-[65px] text-gray-900">
+            <h2 className=" xl:text-5xl   text-3xl xl:max-w-[600px] font-normal tracking-tight xl:leading-[65px] text-gray-900">
               What Our Customers Speak About Us
             </h2>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-10 ">
+        <div className="flex flex-col mx-auto lg:flex-row gap-10 ">
           {/* Video thumbnail with play button */}
-          <div className="w-full md:w-1/2 relative rounded-lg overflow-hidden shadow-lg max-w-[500px] ">
+          <div className="w-full lg:w-1/2 relative rounded-lg overflow-hidden shadow-lg max-w-[500px] ">
             <div className="aspect-w-16 aspect-h-9 bg-gray-200">
               <img
                 src={currentTestimonial.videoThumbnail}
@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
             </div>
           </div>
           {/* Testimonial content */}
-          <div className="w-full md:w-1/2 flex flex-col">
+          <div className="w-full lg:w-1/2 flex flex-col">
             <blockquote className="text-lg font-light italic text-black mb-6">
               {currentTestimonial.quote}
             </blockquote>

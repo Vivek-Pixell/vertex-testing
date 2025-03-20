@@ -27,7 +27,7 @@ export default function StatsSection() {
       <div className=" mx-auto px-4 md:px-40 ">
         <Grid container spacing={4}>
           <Grid item xs={12} md={5}>
-            <div className=" text-black md:text-lg tracking-wide	">
+            <div className=" text-black xl:text-lg tracking-wide	">
               <p>
                 <span className=" text-md font-medium text-black">
                   Vertex
@@ -80,7 +80,7 @@ export default function StatsSection() {
                 key={`top-${currentIndex}`}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-400 text-center my-2 text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-gray-700"
+                className="text-3xl md:text-4xl  font-semibold text-gray-400 text-center my-2 text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-gray-700"
               >
                 {
                   headings[
@@ -97,7 +97,7 @@ export default function StatsSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-4xl md:text-4xl lg:text-5xl font-bold text-black text-center drop-shadow-xl my-4"
+                  className="text-4xl md:text-4xl xl:text-5xl font-bold text-black text-center drop-shadow-xl my-4"
                 >
                   {headings[currentIndex]}
                 </motion.h3>
@@ -108,7 +108,7 @@ export default function StatsSection() {
                 key={`bottom-${currentIndex}`}
                 animate={{ opacity: 0.5, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-400 text-center my-2 text-transparent bg-clip-text bg-gradient-to-b from-gray-900 to-gray-300"
+                className="text-3xl md:text-4xl  font-semibold text-gray-400 text-center my-2 text-transparent bg-clip-text bg-gradient-to-b from-gray-900 to-gray-300"
               >
                 {headings[(currentIndex + 1) % headings.length]}
               </motion.h3>

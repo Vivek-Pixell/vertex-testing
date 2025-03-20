@@ -37,16 +37,16 @@ export default function BlogSection() {
     <section className="py-12 ">
       <div className=" px-4 md:px-40 ">
         {/* Section Header */}
-        <div className=" flex flex-row gap-6  mb-4 md:p-8">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6  mb-4 md:p-8">
           <div className=" space-y-3">
             <h3 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
               LATEST BLOG
             </h3>
-            <h2 className=" md:text-4xl lg:text-6xl min-w-xl text-3xl font-normal tracking-tight leading-[65px] text-gray-900">
+            <h2 className=" md:text-3xl xl:text-5xl text-3xl font-normal tracking-tight xl:leading-[65px] text-gray-900">
               Where The Beat Meets Business Billboard
             </h2>
           </div>
-          <div className=" flex items-center text-gray-500 md:p-10">
+          <div className=" flex items-center text-gray-500 md:pt-6">
             <p>
               Billboard advertising is a powerful marketing too businesBillboard
               advertising is a powerful marketing tool that he businesses gain
@@ -56,7 +56,7 @@ export default function BlogSection() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 p-4">
           {blogPosts.map((post, index) => (
             <div
               key={index}

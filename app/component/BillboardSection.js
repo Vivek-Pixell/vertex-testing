@@ -15,7 +15,7 @@ export default function BillboardSection() {
             <Image
               src={billboard} // ✅ Uses Next.js Image for optimization
               alt="Digital Billboard"
-              className="w-full object-cover rounded-2xl"
+              className="w-full  object-contain xl:object-cover rounded-2xl"
             />
           </div>
 
@@ -27,7 +27,7 @@ export default function BillboardSection() {
               </h4>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-15 font-normal tracking-tight text-gray-900">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl xl:leading-15 font-normal xl:tracking-tight text-gray-900">
               The Digi Cybsecure The Transfor Billbord
             </h2>
 
