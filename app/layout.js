@@ -1,24 +1,31 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import { Jost } from 'next/font/google';
+
+const jost = Jost({
+  weight: ['400', '700'], // Choose the weights you need
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata = {
-  title: "Vertex",
-  description: "The Future of Smart and Stylish Signage",
+  title: 'Vertex',
+  description: 'The Future of Smart and Stylish Signage',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={jost.className}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -27,8 +34,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-
 
 // import { Jost } from "next/font/google";
 
