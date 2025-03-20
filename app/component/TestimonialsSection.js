@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className=" lg:w-1/2 mb-6">
           <div className="mb-6">
-            <h4 className="text-md leading-2 font-semibold text-[#5EB652] tracking-[1.05px]">
+            <h4 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
               TESTIMONIALS
             </h4>
           </div>

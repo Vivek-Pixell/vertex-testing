@@ -39,7 +39,7 @@ export default function ImageGrid() {
     <div className="w-full py-12">
       <div className="px-4 md:px-40 ">
         <div className="space-y-2 flex flex-col ">
-          <p className=" text-md md:text-lg leading-5 font-medium text-[#5EB652] tracking-[0.85px]">
+          <p className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
             TESTIMONIALS
           </p>
           <h2 className=" md:text-4xl lg:text-5xl  text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">

@@ -22,7 +22,7 @@ export default function BillboardSection() {
           {/* Right Column - Content */}
           <div className="">
             <div>
-              <h4 className="text-md leading-[50px] font-medium text-[#5EB652] tracking-[0.55px] uppercase">
+              <h4 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px] uppercase">
                 Why Choose Us
               </h4>
             </div>
