@@ -1,5 +1,5 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-24">
-          {["Home", "Work", "Products", "About Us"].map((item) => (
+          {['Home', 'Work', 'Products', 'About Us'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -41,7 +41,7 @@ const Navbar = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
             />
           </svg>
         </button>
@@ -50,10 +50,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`${
-          isOpen ? "block" : "hidden"
+          isOpen ? 'block' : 'hidden'
         } absolute top-16 left-0 right-0 bg-gray-800 opacity-50 text-white text-center flex flex-col py-6 space-y-6 md:hidden`}
       >
-        {["Home", "Work", "Products", "About Us"].map((item) => (
+        {['Home', 'Work', 'Products', 'About Us'].map((item) => (
           <a
             key={item}
             href={`#${item.toLowerCase()}`}

@@ -1,54 +1,52 @@
-"use client";
-import userIcon from "../../public/icons/user.svg";
-import comnt from "../../public/icons/comnt.svg";
+'use client';
+import userIcon from '../../public/icons/user.svg';
+import comnt from '../../public/icons/comnt.svg';
 
-import {
-  CalendarMonth,
-  ArrowForward,
-} from "@mui/icons-material";
-
+import { CalendarMonth, ArrowForward } from '@mui/icons-material';
 
 const blogPosts = [
   {
-    date: "May 19, 2023",
-    author: "Mesbah",
-    comments: "Comments (05)",
-    title: "Innovate  Create  Inspire  your brand to life in ",
+    date: 'May 19, 2023',
+    author: 'Mesbah',
+    comments: 'Comments (05)',
+    title: 'Innovate  Create  Inspire  your brand to life in ',
     imageUrl:
-      "https://images.unsplash.com/photo-1712847333437-f9386beb83e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGh1bWFufGVufDB8fDB8fHww",
+      'https://images.unsplash.com/photo-1712847333437-f9386beb83e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGh1bWFufGVufDB8fDB8fHww',
   },
   {
-    date: "May 19, 2023",
-    author: "Mesbah",
-    comments: "Comments (05)",
-    title: "Services does your billboard company offer",
+    date: 'May 19, 2023',
+    author: 'Mesbah',
+    comments: 'Comments (05)',
+    title: 'Services does your billboard company offer',
     imageUrl:
-      "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=2069",
+      'https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=2069',
   },
   {
-    date: "May 19, 2023",
-    author: "Mesbah",
-    comments: "Comments (05)",
-    title: "Types of billboards do you have available",
+    date: 'May 19, 2023',
+    author: 'Mesbah',
+    comments: 'Comments (05)',
+    title: 'Types of billboards do you have available',
     imageUrl:
-      "https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=2000",
+      'https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=2000',
   },
 ];
 
 export default function BlogSection() {
-  console.log("com", comnt);
+  console.log('com', comnt);
   return (
     <section className="py-12 ">
-      <div className=" px-4 md:px-32 ">
+      <div className=" px-4 md:px-40 ">
         {/* Section Header */}
-        <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 mb-4 md:p-8">
+        <div className=" flex flex-row gap-6  mb-4 md:p-8">
           <div className=" space-y-3">
-            <h3 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">LATEST BLOG</h3>
-            <h2 className=" md:text-4xl lg:text-6xl text-3xl font-normal tracking-tight leading-[65px] text-gray-900">
+            <h3 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
+              LATEST BLOG
+            </h3>
+            <h2 className=" md:text-4xl lg:text-6xl min-w-xl text-3xl font-normal tracking-tight leading-[65px] text-gray-900">
               Where The Beat Meets Business Billboard
             </h2>
           </div>
-          <div className=" flex items-center md:p-10">
+          <div className=" flex items-center text-gray-500 md:p-10">
             <p>
               Billboard advertising is a powerful marketing too businesBillboard
               advertising is a powerful marketing tool that he businesses gain
@@ -62,7 +60,7 @@ export default function BlogSection() {
           {blogPosts.map((post, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-3xl overflow-hidden shadow-lg group"
+              className=" rounded-3xl overflow-hidden shadow-lg group"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
@@ -84,17 +82,22 @@ export default function BlogSection() {
                         alt="UserIcon"
                         className="w-4 h-4"
                       />
-                      <span className=" text-[16px] text-black">{post.author}</span>
+                      <span className=" text-[16px] text-black">
+                        {post.author}
+                      </span>
                     </div>
                     <div className="flex space-x-2 items-center cursor-pointer">
                       <img src={comnt.src} alt="UserIcon" className="w-4 h-4" />
-                      <span className=" text-[16px] text-black">{post.comments}</span>
+                      <span className=" text-[16px] text-black">
+                        {post.comments}
+                      </span>
                     </div>
                   </div>
-                  <div className=" bg-[#175177] rounded-3xl absolute -right-5 -top-12 flex items-center space-x-2 text-white px-4 py-1 cursor-pointer">
-                    
+                  <div className=" bg-[#175177]  rounded-3xl absolute -right-5 -top-12 flex items-center space-x-2 text-white px-4 py-1 cursor-pointer">
                     <CalendarMonth className="w-4 h-4 p-1 text-yellow-200" />
-                    <span>{post.date}</span>
+                    <span className=" text-[16px] font-light font-roboto">
+                      {post.date}
+                    </span>
                   </div>
                 </div>
 

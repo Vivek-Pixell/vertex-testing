@@ -1,6 +1,6 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Navbar from "./NavBar";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Navbar from './NavBar';
 
 const ComA = () => {
   // State for carousel
@@ -8,9 +8,9 @@ const ComA = () => {
 
   // Sample video sources - replace with your actual videos
   const carouselVideos = [
-    "/videos/video1.mp4",
-    "/videos/video2.mp4",
-    "/videos/video3.mp4",
+    '/videos/video1.mp4',
+    '/videos/video2.mp4',
+    '/videos/video3.mp4',
   ];
 
   // Auto-rotate carousel
@@ -29,7 +29,7 @@ const ComA = () => {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-500 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <video
@@ -38,7 +38,7 @@ const ComA = () => {
             muted
             loop
             playsInline
-            onError={(e) => console.error("Video error:", e)}
+            onError={(e) => console.error('Video error:', e)}
           >
             <source src={vid} type="video/mp4" />
             Your browser does not support the video tag.
@@ -56,7 +56,9 @@ const ComA = () => {
             <h1 className="text-4xl md:text-5xl lg:text-[70px] text-white font-semibold mb-4">
               Heading
             </h1>
-            <p className="text-sm text-white font-light mt-2 mb-8">Sub heading</p>
+            <p className="text-sm text-white font-light mt-2 mb-8">
+              Sub heading
+            </p>
             <div className="flex items-center gap-2">
               <a
                 href="#details"
@@ -101,8 +103,8 @@ const ComA = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-8 h-1 rounded-full transition-all cursor-pointer ${
                   index === currentSlide
-                    ? " bg-gray-700"
-                    : "bg-white bg-opacity-50"
+                    ? ' bg-gray-700'
+                    : 'bg-white bg-opacity-50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

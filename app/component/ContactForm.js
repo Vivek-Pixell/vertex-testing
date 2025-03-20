@@ -1,43 +1,43 @@
-"use client";
-import { ArrowForward } from "@mui/icons-material";
-import {useState } from "react";
-import axios from "axios";
-import CircularProgress from "@mui/material/CircularProgress";
-import Swal from "sweetalert2";
+'use client';
+import { ArrowForward } from '@mui/icons-material';
+import { useState } from 'react';
+import axios from 'axios';
+import CircularProgress from '@mui/material/CircularProgress';
+import Swal from 'sweetalert2';
 
 export default function ContactForm() {
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
   });
 
   const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
   });
 
   const validateForm = () => {
     const newErrors = {};
 
     if (!formData.firstName.trim())
-      newErrors.firstName = "First Name is required.";
+      newErrors.firstName = 'First Name is required.';
     if (!formData.lastName.trim())
-      newErrors.lastName = "Last Name is required.";
-    if (!formData.email.trim()) newErrors.email = "Email is required.";
+      newErrors.lastName = 'Last Name is required.';
+    if (!formData.email.trim()) newErrors.email = 'Email is required.';
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required.";
+      newErrors.phone = 'Phone Number is required.';
     } else if (formData.phone.length < 10) {
-      newErrors.phone = "Phone Number must be at least 10 digits.";
+      newErrors.phone = 'Phone Number must be at least 10 digits.';
     }
-    if (!formData.message.trim()) newErrors.message = "Message is required.";
+    if (!formData.message.trim()) newErrors.message = 'Message is required.';
 
     setErrors(newErrors);
 
@@ -53,49 +53,49 @@ export default function ContactForm() {
 
     try {
       setIsLoading(true);
-      const response = await axios.post("/api/contact", formData, {
+      const response = await axios.post('/api/contact', formData, {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
 
       if (response.status === 200) {
         // ✅ Show success notification
         Swal.fire({
-          icon: "success",
-          title: "Message Sent!",
-          text: "We will get back to you shortly.",
-          confirmButtonColor: "#22c55e",
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'We will get back to you shortly.',
+          confirmButtonColor: '#22c55e',
         });
 
         // ✅ Reset form data after successful submission
         setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
         });
         setIsLoading(false);
         setErrors({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
         });
       } else {
-        throw new Error("Failed to send message");
+        throw new Error('Failed to send message');
       }
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error('Error sending message:', error);
 
       // ❌ Show error notification
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Failed to send message. Please try again later.",
-        confirmButtonColor: "#ef4444",
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Failed to send message. Please try again later.',
+        confirmButtonColor: '#ef4444',
       });
 
       setIsLoading(false);
@@ -158,7 +158,7 @@ export default function ContactForm() {
               className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
               value={formData.phone}
               onChange={(e) => {
-                const onlyNumbers = e.target.value.replace(/\D/g, ""); // Allow only numbers
+                const onlyNumbers = e.target.value.replace(/\D/g, ''); // Allow only numbers
                 if (onlyNumbers.length <= 10) {
                   setFormData({ ...formData, phone: onlyNumbers });
                 }
@@ -189,7 +189,7 @@ export default function ContactForm() {
           disabled={isLoading}
         >
           <span className="text-lg font-semibold">
-            {isLoading ? "Sending..." : "Send Message"}
+            {isLoading ? 'Sending...' : 'Send Message'}
           </span>
           <ArrowForward className="pt-1 w-5 h-5 transition-transform group-hover:translate-x-2" />
           {isLoading && (

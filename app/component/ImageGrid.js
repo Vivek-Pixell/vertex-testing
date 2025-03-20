@@ -1,46 +1,48 @@
-"use client";
+'use client';
 
-const services= [
+const services = [
   {
-    title: "OOH Media Assets",
+    title: 'OOH Media Assets',
     image:
-      "https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=1000",
-    description: "Strategic placement of outdoor advertising media",
+      'https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=1000',
+    description: 'Strategic placement of outdoor advertising media',
   },
   {
-    title: "Wayfinding Signages",
+    title: 'Wayfinding Signages',
     image:
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000",
-    description: "Intuitive navigation systems for urban spaces",
+      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000',
+    description: 'Intuitive navigation systems for urban spaces',
   },
   {
-    title: "Digital Screens",
+    title: 'Digital Screens',
     image:
-      "https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D",
-    description: "High-impact digital display solutions",
+      'https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D',
+    description: 'High-impact digital display solutions',
   },
 
   {
-    title: "Urban Landing",
+    title: 'Urban Landing',
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Custom-made architectural elements",
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    description: 'Custom-made architectural elements',
   },
   {
-    title: "Bespoke Fabrication",
+    title: 'Bespoke Fabrication',
     image:
-      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000",
-    description: "Custom-made architectural elements",
+      'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000',
+    description: 'Custom-made architectural elements',
   },
 ];
 
 export default function ImageGrid() {
   return (
-    <div className="w-full py-12 md:pt-24 lg:pt-32">
-      <div className="px-4 md:px-32 ">
+    <div className="w-full py-12">
+      <div className="px-4 md:px-40 ">
         <div className="space-y-2 flex flex-col ">
-          <p className=" text-md md:text-2xl leading-5 font-medium text-[#5EB652] tracking-[0.85px]">TESTIMONIALS</p>
-          <h2 className=" md:text-4xl lg:text-5xl xl:text-6xl text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">
+          <p className=" text-md md:text-lg leading-5 font-medium text-[#5EB652] tracking-[0.85px]">
+            TESTIMONIALS
+          </p>
+          <h2 className=" md:text-4xl lg:text-5xl  text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">
             What We Offer To Our <br /> Clients
           </h2>
         </div>
@@ -57,7 +59,7 @@ export default function ImageGrid() {
                 <div className="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-all duration-500" />
               </div>
               <div className="absolute bottom-0 left-0 right-0  p-4 transform group-hover:scale-110 transition-transform duration-500">
-              <h3 className="text-lg md:text-3xl lg:text-lg 2xl:text-3xl font-medium text-white">
+                <h3 className="text-sm md:text-sm xl:text-lg  font-medium text-white">
                   {service.title}
                 </h3>
                 {/* <p className="mt-2 text-sm text-gray-300 hidden group-hover:block">

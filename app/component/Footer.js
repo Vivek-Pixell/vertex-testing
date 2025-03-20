@@ -1,11 +1,7 @@
-"use client";
-import ContactForm from "./ContactForm";
+'use client';
+import ContactForm from './ContactForm';
 
-import {
-  Facebook,
-  LinkedIn,
-  Pinterest,
-} from "@mui/icons-material";
+import { Facebook, LinkedIn, Pinterest } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
 // import ContactForm from "./ContactForm";
 
@@ -52,11 +48,11 @@ export default function Footer() {
 
         {/* Links Section */}
         <div>
-        <h3 className="text-2xl font-normal leading-8 mb-6 text-center md:text-start">
+          <h3 className="text-2xl font-normal leading-8 mb-6 text-center md:text-start">
             About
           </h3>
           <ul className="grid grid-cols-2 justify-center md:justify-start md:grid-cols-1 gap-4 font-normal text-lg">
-            {["Leadership", "Diversity", "Partners", "ESG"].map(
+            {['Leadership', 'Diversity', 'Partners', 'ESG'].map(
               (item, index) => (
                 <li key={index} className=" text-center md:text-start">
                   <a
@@ -71,12 +67,10 @@ export default function Footer() {
           </ul>
         </div>
         <div className="absolute -top-3/6 md:left-5/12 lg:left-7/12 xl:left-7/12 bg-[#111] p-6 md:p-8 rounded-xl border border-green-500 shadow-lg hidden md:block">
-
           <ContactForm />
         </div>
       </div>
 
-      
       <div className="max-w-7xl mx-auto mt-16 py-8">
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-gray-200 text-sm">
           <p className="hidden md:block">

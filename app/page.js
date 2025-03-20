@@ -19,6 +19,7 @@ export default function Home() {
   }, []);
   return (
     <div className=" bg-gray-200">
+
       <ComA />
       <StatsSection />
       <ImageGrid />
@@ -31,6 +32,7 @@ export default function Home() {
         <ContactForm />
       </div>
       <Footer />
+
     </div>
   );
 }

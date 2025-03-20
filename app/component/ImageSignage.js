@@ -1,16 +1,16 @@
-"use client"; // Needed for Next.js App Router
+'use client'; // Needed for Next.js App Router
 
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Image from "next/image";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Image from 'next/image';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 const images = [
-  "/images/sinage1.webp", // Update paths
-  "/images/sinage2.webp",
-  "/images/sinage3.webp",
-  "/images/sinage4.webp",
+  '/images/sinage1.webp', // Update paths
+  '/images/sinage2.webp',
+  '/images/sinage3.webp',
+  '/images/sinage4.webp',
 ];
 
 const gridSizes = [4.5, 7.5, 7.5, 4.5]; // Define alternating sizes
@@ -26,21 +26,21 @@ export default function ImageSignage() {
               item
               xs={12}
               md={gridSizes[index]}
-              sx={{ height: "420px", width: "100%", borderRadius: "30px" }}
+              sx={{ height: '420px', width: '100%', borderRadius: '30px' }}
             >
               <Paper
                 sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "end",
-                  borderRadius: "20px",
-                  height: "100%",
-                  width: "100%",
-                  position: "relative",
-                  overflow: "hidden",
-                  "&:hover .hover-content": {
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'end',
+                  borderRadius: '20px',
+                  height: '100%',
+                  width: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  '&:hover .hover-content': {
                     opacity: 1,
-                    transform: "translateY(0)",
+                    transform: 'translateY(0)',
                   },
                 }}
               >
@@ -49,7 +49,7 @@ export default function ImageSignage() {
                   src={src}
                   alt={`Signage ${index + 1}`}
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: 'cover' }}
                   quality={100}
                 />
 
@@ -57,18 +57,26 @@ export default function ImageSignage() {
                 <Box
                   className="hover-content"
                   sx={{
-                    justifyContent: "center",
-                    borderRadius: "14px",
-                    width: "98%",
-                    backgroundColor: "white",
+                    justifyContent: 'center',
+                    borderRadius: '14px',
+                    width: '98%',
+                    backgroundColor: 'white',
                     padding: 4,
                     margin: 2,
                     opacity: 0,
-                    transform: "translateY(100%)",
-                    transition: "all 0.5s ease-in-out",
+                    transform: 'translateY(100%)',
+                    transition: 'all 0.5s ease-in-out',
                   }}
                 >
-                  <Typography variant="body2" sx={{color: "black", paddingBottom: "15px", display: "flex", alignItems: "center"}}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'black',
+                      paddingBottom: '15px',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
                     Transform Billboard
                     <div className="flex-1 border-b ml-1 border-black max-w-[40px]"></div>
                   </Typography>
