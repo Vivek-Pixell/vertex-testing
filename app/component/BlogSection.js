@@ -32,7 +32,6 @@ const blogPosts = [
 ];
 
 export default function BlogSection() {
-  console.log('com', comnt);
   return (
     <section className="py-12 ">
       <div className=" px-4 md:px-40 ">

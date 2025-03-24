@@ -80,7 +80,7 @@ export default function ImageSignage() {
                     }}
                   >
                     Transform Billboard
-                    <div className="flex-1 border-b ml-1 border-black max-w-[40px]"></div>
+                    <span className="flex-1 border-b ml-1 border-black max-w-[40px]"></span>
                   </Typography>
                   <Typography fontWeight="bold">
                     Outdoor The Most Advertising
