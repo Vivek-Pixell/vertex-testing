@@ -33,11 +33,13 @@ const ComA = () => {
           }`}
         >
           <video
+            key={vid}
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted
             loop
             playsInline
+            preload="metadata"
             onError={(e) => console.error('Video error:', e)}
           >
             <source src={vid} type="video/mp4" />

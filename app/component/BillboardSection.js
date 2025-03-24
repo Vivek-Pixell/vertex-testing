@@ -14,8 +14,9 @@ export default function BillboardSection() {
           <div className="relative rounded-3xl lg:p-8 ">
             <Image
               src={billboard} // ✅ Uses Next.js Image for optimization
-              alt="Digital Billboard"
+              alt="Digital Billboard showcasing Vertex's advertising solutions"
               className="w-full  object-contain xl:object-cover rounded-2xl"
+              priority
             />
           </div>
 
@@ -31,7 +32,7 @@ export default function BillboardSection() {
               The Digi Cybsecure The Transfor Billbord
             </h2>
 
-            <p className="text-gray-500 font-light py-4 mb-8 max-w-[550px]">
+            <p className="text-gray-500 text-sm py-4 mb-8 max-w-[550px]">
               Billboard advertising is a powerful marketing tool that he
               businesses gain visibility and reach their target audience
               Billboard advertising is a powerful marketing tool that he

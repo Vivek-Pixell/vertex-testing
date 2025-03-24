@@ -46,9 +46,8 @@ const PartnersShowcase = () => {
               <Image
                 src={partner.logo}
                 alt={partner.name}
-                width={150}
-                height={80}
-                className=" object-contain transition-transform duration-300 ease-linear"
+                priority
+                className="w-[150px] h-auto object-contain transition-transform duration-300 ease-linear"
                 // style={{ transform: `rotate(${rotation}deg)` }}
               />
               {/* <h3 className="font-bold text-xl pb-2 text-black">
@@ -67,6 +66,7 @@ const PartnersShowcase = () => {
             loop
             muted
             playsInline
+            preload="metadata"
             onError={(e) => console.error('Video error:', e)}
           >
             <source src="/video1.mp4" type="video/mp4" />

@@ -55,6 +55,7 @@ export default function ImageGrid() {
                   alt={service.title}
                   className=" inset-0 h-full w-full object-cover transition-all duration-300
                     filter grayscale group-hover:grayscale-0 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-all duration-500" />
               </div>

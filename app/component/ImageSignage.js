@@ -13,7 +13,7 @@ const images = [
   '/images/sinage4.webp',
 ];
 
-const gridSizes = [4.5, 7.5, 7.5, 4.5]; // Define alternating sizes
+const gridSizes = [5, 7, 7, 5]; // Define alternating sizes
 
 export default function ImageSignage() {
   return (
@@ -51,6 +51,8 @@ export default function ImageSignage() {
                   fill
                   style={{ objectFit: 'cover' }}
                   quality={100}
+                  priority
+                  className=" h-auto w-auto"
                 />
 
                 {/* Hidden White Block - Shows on Hover */}
