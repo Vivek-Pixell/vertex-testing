@@ -24,7 +24,7 @@ export default function StatsSection() {
 
   return (
     <section className=" my-12 md:my-20">
-      <div className=" mx-auto px-4 md:px-40 ">
+      <div className=" mx-auto px-4 lg:px-40 md:px-24 ">
         <Grid container spacing={4}>
           <Grid item xs={12} md={5}>
             <div className=" text-black xl:text-lg tracking-wide	">

@@ -34,7 +34,7 @@ const blogPosts = [
 export default function BlogSection() {
   return (
     <section className="py-12 ">
-      <div className=" px-4 md:px-40 ">
+      <div className=" px-4 md:px-24 lg:px-40 ">
         {/* Section Header */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6  mb-4">
           <div className=" space-y-3">
@@ -59,7 +59,7 @@ export default function BlogSection() {
           {blogPosts.map((post, index) => (
             <div
               key={index}
-              className=" rounded-3xl overflow-hidden shadow-lg group"
+              className=" rounded-3xl overflow-hidden shadow-lg group bg-gray-100"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">

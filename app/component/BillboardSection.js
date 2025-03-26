@@ -8,7 +8,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export default function BillboardSection() {
   return (
     <section>
-      <div className=" px-4 md:px-32">
+      <div className=" px-4 md:px-24 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 items-center">
           {/* Left Column - Image */}
           <div className="relative rounded-3xl lg:p-8 ">

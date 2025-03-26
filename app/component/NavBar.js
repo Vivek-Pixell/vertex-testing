@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -15,13 +16,17 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-24">
           {['Home', 'Work', 'Products', 'About Us'].map((item) => (
-            <a
+            <Link
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={
+                item === 'Home'
+                  ? '/'
+                  : `/${item.toLowerCase().replace(/\s+/g, '-')}`
+              }
               className="text-white text-md font-normal hover:text-gray-300 transition"
             >
               {item}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -54,14 +59,17 @@ const Navbar = () => {
         } absolute top-16 left-0 right-0 bg-gray-800 opacity-50 text-white text-center flex flex-col py-6 space-y-6 md:hidden`}
       >
         {['Home', 'Work', 'Products', 'About Us'].map((item) => (
-          <a
+          <Link
             key={item}
-            href={`#${item.toLowerCase()}`}
-            className=" text-white transition"
-            onClick={() => setIsOpen(false)}
+            href={
+              item === 'Home'
+                ? '/'
+                : `/${item.toLowerCase().replace(/\s+/g, '-')}`
+            }
+            className="text-white text-md font-normal hover:text-gray-300 transition"
           >
             {item}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>

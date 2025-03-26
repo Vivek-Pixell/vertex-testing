@@ -29,7 +29,7 @@ const PartnersShowcase = () => {
   // }, []);
 
   return (
-    <section className="py-16 px-4 md:px-40">
+    <section className="py-16 px-4 md:px-24 lg:px-40">
       <div className="container mx-auto text-center">
         {/* Heading */}
         <h2 className="text-gray-800 text-lg md:text-xl mb-8">
