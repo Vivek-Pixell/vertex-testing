@@ -16,7 +16,7 @@ const page = () => {
       <AboutUsPage />
       <ScrollingImages />
       <CoreValues />
-      {/* <Machineries /> */}
+      <Machineries />
       <div className=" md:hidden p-4 m-2 border rounded-2xl bg-black text-white">
         <ContactForm />
       </div>

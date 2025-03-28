@@ -166,14 +166,14 @@ const CoreValues = () => {
   ];
 
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-16">
       <div className="px-4 md:px-24 lg:px-40">
-        <div className="space-y-2 flex flex-col">
+        <div className="space-y-2 mb-4 flex flex-col">
           <p className="text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
             CORE VALUES
           </p>
           <h2 className="md:text-4xl lg:text-5xl text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">
-            What We Offer To Our <br /> Clients
+            lorem Ipsom Dolor Sit <br /> Amet. Consectetur Adip...
           </h2>
         </div>
 
@@ -195,7 +195,7 @@ const CoreValues = () => {
                   <div className={` flex flex-col gap-2 `}>
                     <span className="">{value.icon}</span>
                     <h3 className="text-lg font-semibold">{value.title}</h3>
-                    <p className="text-base text-gray-600 text-justify">
+                    <p className="text-[15px] font-light text-gray-600 text-justify">
                       {value.description}
                     </p>
                   </div>
@@ -223,7 +223,9 @@ const CoreValues = () => {
                 <div className="flex flex-col gap-2 ">
                   <span className="">{value.icon}</span>
                   <h3 className="text-lg font-semibold">{value.title}</h3>
-                  <p className="text-base text-gray-600">{value.description}</p>
+                  <p className="text-[15px] font-light text-gray-600 text-justify">
+                    {value.description}
+                  </p>
                 </div>
                 {value.image && (
                   <Image

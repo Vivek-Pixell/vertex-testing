@@ -11,7 +11,7 @@ const AboutUsPage = () => {
   ];
 
   return (
-    <section className=" my-12 md:my-20">
+    <section className=" my-16 md:my-20">
       <div className=" mx-auto px-4 md:px-24 lg:px-40 ">
         <Grid container spacing={6}>
           <Grid item xs={12} md={6}>
@@ -19,7 +19,7 @@ const AboutUsPage = () => {
               <h4 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px] uppercase">
                 About Us
               </h4>
-              <p className=" text-black text-lg py-4 mb-8 max-w-[550px]">
+              <p className=" text-black text-lg py-4 mb-8 max-w-[480px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 quis finibus urna, vel vestibulum neque. Duis dictum, tellus
                 rutrum mollis egestas, massa leo vehicula odio, sit amet tempus
@@ -30,7 +30,7 @@ const AboutUsPage = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Grid container spacing={4}>
+            <Grid container columnSpacing={8} rowSpacing={2}>
               {stat.map((item, index) => (
                 <Grid key={index} item xs={6} md={6} lg={6}>
                   <div className=" p-4 xl:min-w-[200px] border xl:py-8 justify-center flex flex-col border-gray-300 rounded-2xl">

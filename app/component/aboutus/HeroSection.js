@@ -17,7 +17,7 @@ const HeroSection = () => {
         <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-6xl font-normal">
           Weaving Your Dreams into Unforgettable Experience
         </h1>
-        <p className="mt-4 text-sm md:text-lg lg:text-md text-justify ">
+        <p className="mt-4 text-sm md:text-lg lg:text-[24px] text-justify ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
           finibus urna, vel vestibulum neque. Duis dictum, tellus rutrum mollis
           egestas.

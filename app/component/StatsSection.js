@@ -24,7 +24,7 @@ export default function StatsSection() {
 
   return (
     <section className=" my-12 md:my-20">
-      <div className=" mx-auto px-4 lg:px-40 md:px-24 ">
+      <div className=" mx-auto px-4 lg:px-40 md:px-24 xl:max-h-[250px]">
         <Grid container spacing={4}>
           <Grid item xs={12} md={5}>
             <div className=" text-black xl:text-lg tracking-wide	">
@@ -74,7 +74,7 @@ export default function StatsSection() {
           </Grid>
           <Grid item xs={12} md={7}>
             {/* Top Heading (Static) */}
-            <div className="flex flex-col gap-4  overflow-hidden">
+            <div className="flex flex-col gap-4 overflow-hidden">
               {/* Top Heading (Faded) */}
               <motion.h3
                 key={`top-${currentIndex}`}

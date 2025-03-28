@@ -60,7 +60,7 @@ const images = [
 
 const InfiniteImageScroller = () => {
   return (
-    <div className="relative overflow-hidden w-full  py-6">
+    <div className="relative overflow-hidden w-full  py-16 ">
       <motion.div
         className="flex space-x-6"
         animate={{
@@ -80,7 +80,7 @@ const InfiniteImageScroller = () => {
             return (
               <div
                 key={index}
-                className={`flex-shrink-0 mx-4 ${isEven ? 'h-[250px] w-[250px]' : 'h-[200px] w-[150px]'} my-auto`}
+                className={`flex-shrink-0 mx-4 ${isEven ? 'h-[210px] w-[250px]' : 'h-[170px] w-[150px]'} my-auto`}
               >
                 <Image
                   src={src}

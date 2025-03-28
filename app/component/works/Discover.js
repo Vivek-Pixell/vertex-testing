@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Discover = () => {
   return (
-    <div className=" relative h-[83vh] xl:h-screen w-full">
+    <div className=" relative h-[83vh] xl:h-screen w-full mb-16">
       <Image
         src="/images/bg-image.webp"
         alt="earth background"
