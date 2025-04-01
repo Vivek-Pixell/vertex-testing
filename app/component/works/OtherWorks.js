@@ -1,32 +1,44 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const OtherWorks = () => {
+  const router = useRouter();
+
   const topLocationData = [
     {
       id: 1,
       name: 'Mumbai Metro',
       city: 'Mumbai, Maharashtra',
+      slug: 'mumbai-metro',
       image: '/images/location7.webp',
     },
     {
       id: 2,
       name: 'Delhi Airport',
       city: 'New Delhi',
+      slug: 'delhi-airport',
       image: '/images/location8.webp',
     },
     {
       id: 3,
       name: 'The Oberoi udaivilas, Udaipur',
       city: 'Udaipur, India',
+      slug: 'oberoi-udaivilas',
       image: '/images/location9.webp',
     },
     {
       id: 4,
       name: 'Banglore Airport',
       city: 'Bangalore, Karnataka',
+      slug: 'bangalore-airport',
       image: '/images/location10.webp',
     },
   ];
+
+  const handleClick = (slug) => {
+    router.push(`/work/${slug}`);
+  };
 
   return (
     <div className="w-full py-16">
@@ -38,20 +50,24 @@ const OtherWorks = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {topLocationData.map((location) => (
-            <div key={location.id} className=" flex flex-col gap-2">
+            <div
+              key={location.id}
+              className=" flex flex-col gap-2"
+              onClick={() => handleClick(location.slug)}
+            >
               <div className=" h-80  rounded-lg shadow-md">
                 <img
-                  className="object-cover w-full h-full rounded-2xl"
+                  className="object-cover w-full h-full rounded-2xl cursor-pointer"
                   src={location.image}
                   alt={location.name}
                 />
               </div>
 
-              <div className=" ">
-                <div className=" w-full  text-black text-md font-medium ">
+              <div className="">
+                <div className=" w-full  text-black text-md font-medium cursor-pointer">
                   {location.name}
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 cursor-pointer">
                   <svg
                     width="14"
                     height="14"

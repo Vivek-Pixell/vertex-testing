@@ -5,6 +5,7 @@ import billboard from './billboard.webp'; // ✅ Image import
 
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Link from 'next/link';
 export default function BillboardSection() {
   return (
     <section>
@@ -41,12 +42,13 @@ export default function BillboardSection() {
               Billboard advertising is a powerful marketing tool that he
               businesses
             </p>
-
-            <button className="flex justify-center lg:justify-start items-center border gap-2 p-6 transition-all duration-400 py-3 rounded-full text-black hover:border-none hover:bg-[#175177] hover:text-white cursor-pointer">
-              <span className=" text-md font-normal">
-                About Vertex <ArrowForwardIcon fontSize="inherit" />
-              </span>
-            </button>
+            <Link href="/about-us">
+              <button className="flex justify-center lg:justify-start items-center border gap-2 p-6 transition-all duration-400 py-3 rounded-full text-black hover:border-none hover:bg-[#175177] hover:text-white cursor-pointer">
+                <span className=" text-md font-normal">
+                  About Vertex <ArrowForwardIcon fontSize="inherit" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

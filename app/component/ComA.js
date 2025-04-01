@@ -1,10 +1,30 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './NavBar';
 
 const ComA = () => {
   // State for carousel
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const videoRef = useRef([]);
+
+  const handleTimeUpdate = () => {
+    const video = videoRef.current[currentSlide];
+    if (video) {
+      const percent = (video.currentTime / video.duration) * 100;
+      setProgress(percent);
+    }
+  };
+
+  useEffect(() => {
+    setProgress(0);
+    const video = videoRef.current[currentSlide];
+    if (video) {
+      video.load();
+      video.currentTime = 0;
+      video.play();
+    }
+  }, [currentSlide]);
 
   // Sample video sources - replace with your actual videos
   const carouselVideos = [
@@ -17,7 +37,8 @@ const ComA = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselVideos.length);
-    }, 8000); // Change slide every 8 seconds
+      setProgress(0);
+    }, 9000);
 
     return () => clearInterval(interval);
   }, []);
@@ -33,14 +54,15 @@ const ComA = () => {
           }`}
         >
           <video
+            ref={(el) => (videoRef.current[index] = el)}
             key={vid}
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted
-            loop
             playsInline
-            preload="metadata"
+            preload="auto"
             onError={(e) => console.error('Video error:', e)}
+            onTimeUpdate={index === currentSlide ? handleTimeUpdate : null} // Track progress only on active video
           >
             <source src={vid} type="video/mp4" />
             Your browser does not support the video tag.
@@ -54,14 +76,14 @@ const ComA = () => {
       {/* Hero Content */}
       <div className="relative z-10 mb-5 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-16">
         <div className="">
-          <div className=" px-8 my-4">
+          <div className=" my-4">
             <h1 className="text-4xl md:text-5xl lg:text-[70px] text-white font-semibold mb-4">
               Heading
             </h1>
             <p className="text-sm text-white font-light mt-2 mb-8">
               Sub heading
             </p>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <a
                 href="#details"
                 className="text-white text-sm md:text-base font-normal hover:text-gray-300 transition"
@@ -94,7 +116,7 @@ const ComA = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </div>
+            </div> */}
           </div>
 
           {/* Carousel indicators */}
@@ -103,13 +125,21 @@ const ComA = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-8 h-1 rounded-full transition-all cursor-pointer ${
-                  index === currentSlide
-                    ? ' bg-gray-700'
-                    : 'bg-white bg-opacity-50'
-                }`}
+                // className={`w-8 h-1 rounded-full transition-all cursor-pointer ${
+                //   index === currentSlide
+                //     ? ' bg-gray-700'
+                //     : 'bg-white bg-opacity-50'
+                // }`}
+                className="relative w-10 h-1 bg-white bg-opacity-50 rounded-full overflow-hidden cursor-pointer "
                 aria-label={`Go to slide ${index + 1}`}
-              />
+              >
+                {index === currentSlide && (
+                  <div
+                    className="absolute left-0 top-0 h-full bg-gray-700 transition-all duration-400 rounded-full"
+                    style={{ width: `${progress}%` }}
+                  />
+                )}
+              </button>
             ))}
           </div>
         </div>

@@ -72,7 +72,7 @@ export default function StatsSection() {
               </button>
             </div>
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={7} className=" max-h-[275px]">
             {/* Top Heading (Static) */}
             <div className="flex flex-col gap-4 overflow-hidden">
               {/* Top Heading (Faded) */}

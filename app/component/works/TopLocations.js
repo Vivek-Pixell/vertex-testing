@@ -1,66 +1,86 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const TopLocations = () => {
+  const router = useRouter();
+
   const topLocationData = [
     {
       id: 1,
       name: 'Delhi Metro',
       city: 'New Delhi',
+      slug: 'delhi-metro',
       image: '/images/location1.webp',
     },
     {
       id: 2,
-      name: 'Delhii Airport',
+      name: 'Delhi Airport',
       city: 'New Delhi',
+      slug: 'delhi-airport',
       image: '/images/location2.webp',
     },
     {
       id: 3,
       name: 'Mumbai Airport',
       city: 'Mumbai, Maharashtra',
+      slug: 'mumbai-airport',
       image: '/images/location3.webp',
     },
     {
       id: 4,
       name: 'Ram Mandir',
       city: 'Ayodhya, UP',
+      slug: 'ram-mandir',
       image: '/images/location4.webp',
     },
     {
       id: 5,
-      name: 'banglore Airport',
-      city: 'Bangore, Karnataka',
+      name: 'Bangalore Airport',
+      city: 'Bangalore, Karnataka',
+      slug: 'bangalore-airport',
       image: '/images/location5.webp',
     },
     {
       id: 6,
       name: 'Mumbai Airport',
       city: 'Mumbai Maharashtra',
+      slug: 'mumbai-airport-2',
       image: '/images/location6.webp',
     },
   ];
 
+  const handleClick = (slug) => {
+    router.push(`/work/${slug}`);
+  };
+
   return (
     <div className="w-full py-16">
-      <div className="px-4 md:px-24 lg:px-40 ">
+      <div className="px-4 md:px-24 lg:px-40">
         <div className="space-y-2 mb-6 flex flex-col">
           <p className="text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
             TOP LOCATIONS
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {topLocationData.map((location) => (
-            <div key={location.id} className=" flex flex-col gap-2">
-              <div className=" h-40  rounded-lg shadow-md">
-                <img
-                  className="object-cover w-full h-full rounded-2xl"
+            <div
+              key={location.id}
+              className="flex flex-col gap-2 cursor-pointer"
+              onClick={() => handleClick(location.slug)}
+            >
+              <div className="h-40 rounded-2xl shadow-md">
+                <Image
+                  className="object-cover w-full h-full"
                   src={location.image}
                   alt={location.name}
+                  width={100}
+                  height={100}
                 />
               </div>
-
-              <div className=" ">
-                <div className=" w-full  text-black text-md font-medium ">
+              <div>
+                <div className="text-black text-md font-medium">
                   {location.name}
                 </div>
                 <div className="flex items-center gap-1">
@@ -83,7 +103,7 @@ const TopLocations = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <span className=" text-sm font-light text-gray-400">
+                  <span className="text-sm font-light text-gray-400">
                     {location.city}
                   </span>
                 </div>

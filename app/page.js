@@ -26,6 +26,7 @@ export default function Home() {
       <PartnersShowcase />
       <TestimonialsSection />
       <BlogSection />
+
       <div className=" md:hidden p-4 m-2 border rounded-2xl bg-black text-white">
         <ContactForm />
       </div>
