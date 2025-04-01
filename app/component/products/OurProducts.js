@@ -160,19 +160,21 @@ const OurProducts = () => {
               className={`grid grid-cols-1 lg:grid-cols-2  gap-16 mb-6`}
             >
               {/* Image Section */}
-              <div className={`lg:${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
+              <div
+                className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}
+              >
                 <Image
                   src={activeImages[index]}
                   alt="Product"
                   width={500}
                   height={500}
-                  className="rounded-3xl h-[380px]  w-full object-contain shadow-md transition-all duration-500"
+                  className="rounded-3xl h-auto  w-full object-contain shadow-md transition-all duration-500"
                 />
               </div>
 
               {/* Content Section */}
               <div
-                className={` flex flex-col gap-0.5 transition-all duration-300 rounded-xl h-full lg:${index % 2 === 0 ? 'order-2' : 'order-1'}`}
+                className={` flex flex-col gap-0.5 transition-all duration-300 rounded-xl h-full ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}
                 onMouseEnter={() => {
                   handleMouseEnter(index);
                 }}
