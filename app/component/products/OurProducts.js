@@ -16,9 +16,13 @@ const productData = [
       'Delhi Airport',
     ],
     images: [
-      '/images/image201.webp',
-      '/images/image204.webp',
-      '/images/image208.webp',
+      '/images/productPage/image70.webp',
+      '/images/productPage/image71.webp',
+      '/images/productPage/image733.webp',
+      '/images/productPage/image74.webp',
+      '/images/productPage/image75.webp',
+      '/images/productPage/image76.webp',
+      '/images/productPage/image77.webp',
     ],
   },
   {
@@ -28,9 +32,13 @@ const productData = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius, nibh et tincidunt mattis, felis leo varius tellus, tincidunt porttitor mi justo eget est. Quisque dignissim nulla non nisi egestas aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius, nibh et tincidunt mattis, felis leo varius tellus',
     locations: ['Chennai Metro', 'Hyderabad Airport', 'Kolkata Street'],
     images: [
-      '/images/image201.webp',
-      '/images/image204.webp',
-      '/images/image208.webp',
+      '/images/productPage/image71.webp',
+      '/images/productPage/image70.webp',
+      '/images/productPage/image733.webp',
+      '/images/productPage/image74.webp',
+      '/images/productPage/image75.webp',
+      '/images/productPage/image76.webp',
+      '/images/productPage/image77.webp',
     ],
   },
   {
@@ -46,9 +54,14 @@ const productData = [
       'Delhi Airport',
     ],
     images: [
-      '/images/image201.webp',
-      '/images/image204.webp',
-      '/images/image208.webp',
+      '/images/productPage/image75.webp',
+
+      '/images/productPage/image70.webp',
+      '/images/productPage/image71.webp',
+      '/images/productPage/image733.webp',
+      '/images/productPage/image74.webp',
+      '/images/productPage/image76.webp',
+      '/images/productPage/image77.webp',
     ],
   },
   {
@@ -64,9 +77,14 @@ const productData = [
       'Delhi Airport',
     ],
     images: [
-      '/images/image201.webp',
-      '/images/image204.webp',
-      '/images/image208.webp',
+      '/images/productPage/image76.webp',
+
+      '/images/productPage/image70.webp',
+      '/images/productPage/image71.webp',
+      '/images/productPage/image733.webp',
+      '/images/productPage/image74.webp',
+      '/images/productPage/image75.webp',
+      '/images/productPage/image77.webp',
     ],
   },
   {
@@ -82,9 +100,14 @@ const productData = [
       'Delhi Airport',
     ],
     images: [
-      '/images/image201.webp',
-      '/images/image204.webp',
-      '/images/image208.webp',
+      '/images/productPage/image74.webp',
+
+      '/images/productPage/image70.webp',
+      '/images/productPage/image71.webp',
+      '/images/productPage/image733.webp',
+      '/images/productPage/image75.webp',
+      '/images/productPage/image76.webp',
+      '/images/productPage/image77.webp',
     ],
   },
 ];
@@ -94,6 +117,7 @@ const OurProducts = () => {
     productData.map((p) => p.images[0])
   );
   const [intervals, setIntervals] = useState({});
+
   const startImageRotation = (index) => {
     let imageIndex = 0;
 
@@ -124,7 +148,7 @@ const OurProducts = () => {
 
   return (
     <section className="my-16 md:my-20 md:mb-[170px]">
-      <div className="mx-auto px-4 md:px-24 lg:px-40">
+      <div className="mx-auto px-4 md:px-24 xl:px-40">
         <h4 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px] uppercase mb-6">
           Our Products
         </h4>
@@ -142,15 +166,14 @@ const OurProducts = () => {
                   alt="Product"
                   width={500}
                   height={500}
-                  className="rounded-3xl  w-full object-contain shadow-md transition-all duration-500"
+                  className="rounded-3xl h-[380px]  w-full object-contain shadow-md transition-all duration-500"
                 />
               </div>
 
               {/* Content Section */}
               <div
-                className={` flex flex-col gap-2 transition-all duration-300 rounded-xl h-full lg:${index % 2 === 0 ? 'order-2' : 'order-1'}`}
+                className={` flex flex-col gap-0.5 transition-all duration-300 rounded-xl h-full lg:${index % 2 === 0 ? 'order-2' : 'order-1'}`}
                 onMouseEnter={() => {
-                  console.log('Entering', index, product.id);
                   handleMouseEnter(index);
                 }}
                 onMouseLeave={() => handleMouseLeave(index)}
@@ -161,11 +184,11 @@ const OurProducts = () => {
                 </p>
 
                 {/* Locations */}
-                <div className="flex flex-wrap gap-2 mt-1">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {product.locations.map((location, i) => (
                     <div
                       key={i}
-                      className=" flex justify-center items-center gap-2 mt-2 px-3 py-1 border border-gray-300 rounded-full text-gray-600 text-sm"
+                      className=" flex justify-center items-center gap-2  px-3 py-1 border border-gray-300 rounded-full text-gray-600 text-sm"
                     >
                       <svg
                         width="12"

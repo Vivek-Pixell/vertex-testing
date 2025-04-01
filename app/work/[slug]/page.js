@@ -43,7 +43,7 @@ const WorkDetail = () => {
         </div>
       </div>
       <div className="w-full py-16">
-        <div className="px-4 md:px-24 lg:px-40">
+        <div className="px-4 md:px-24 xl:px-40">
           <div className=" sticky top-0 z-10 bg-white pb-4">
             <div className=" flex gap-4 items-center">
               <Image

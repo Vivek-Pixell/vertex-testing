@@ -71,12 +71,10 @@ const ComA = () => {
         </div>
       ))}
 
-      <Navbar />
-
       {/* Hero Content */}
-      <div className="relative z-10 mb-5 h-full flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 lg:px-16">
-        <div className="">
-          <div className=" my-4">
+      <div className="absolute top-16 md:left-10 z-10 mb-5 h-full w-full flex flex-col justify-end pb-16 md:pb-24 px-4 md:px-12 lg:px-16 ">
+        <div className="relative w-full flex flex-col justify-center">
+          <div className=" my-4 hidden md:block">
             <h1 className="text-4xl md:text-5xl lg:text-[70px] text-white font-semibold mb-4">
               Heading
             </h1>
@@ -118,31 +116,26 @@ const ComA = () => {
               </svg>
             </div> */}
           </div>
-
-          {/* Carousel indicators */}
-          <div className="flex justify-center space-x-2 mb-16 md:mb-12">
-            {carouselVideos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                // className={`w-8 h-1 rounded-full transition-all cursor-pointer ${
-                //   index === currentSlide
-                //     ? ' bg-gray-700'
-                //     : 'bg-white bg-opacity-50'
-                // }`}
-                className="relative w-10 h-1 bg-white bg-opacity-50 rounded-full overflow-hidden cursor-pointer "
-                aria-label={`Go to slide ${index + 1}`}
-              >
-                {index === currentSlide && (
-                  <div
-                    className="absolute left-0 top-0 h-full bg-gray-700 transition-all duration-400 rounded-full"
-                    style={{ width: `${progress}%` }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
         </div>
+      </div>
+      {/* Carousel indicators */}
+
+      <div className=" absolute bottom-0 w-full flex justify-center mb-4 md:mb-8 space-x-2">
+        {carouselVideos.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className="relative w-10 h-1 bg-white bg-opacity-50 rounded-full overflow-hidden cursor-pointer "
+            aria-label={`Go to slide ${index + 1}`}
+          >
+            {index === currentSlide && (
+              <div
+                className="absolute left-0 top-0 h-full bg-gray-700 transition-all duration-400 rounded-full"
+                style={{ width: `${progress}%` }}
+              />
+            )}
+          </button>
+        ))}
       </div>
     </div>
   );

@@ -55,7 +55,7 @@ const MakeManage = () => {
 
   return (
     <section className=" my-16 md:my-20">
-      <div className=" mx-auto px-4 md:px-24 lg:px-40 ">
+      <div className=" mx-auto px-4 md:px-24 xl:px-40 ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <Image

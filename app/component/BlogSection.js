@@ -34,7 +34,7 @@ const blogPosts = [
 export default function BlogSection() {
   return (
     <section className="py-12 ">
-      <div className=" px-4 md:px-24 lg:px-40 ">
+      <div className=" px-4 md:px-24 xl:px-40 ">
         {/* Section Header */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6  mb-4">
           <div className=" space-y-3">

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Jost } from 'next/font/google';
+import Navbar from './component/NavBar';
 
 const jost = Jost({
   weight: ['400', '700'], // Choose the weights you need
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

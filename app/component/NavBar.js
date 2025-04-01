@@ -4,9 +4,10 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('home');
 
   return (
-    <nav className=" flex justify-center sticky z-50 bg-transparent transition-all duration-300 p-10 mx-auto">
+    <nav className="absolute flex justify-center w-full z-50 bg-transparent transition-all duration-300 p-10 mx-auto">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         {/* <div className="text-white text-xl font-bold">
@@ -15,7 +16,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-24">
-          {['Home', 'Work', 'Products', 'About Us'].map((item) => (
+          {['Home', 'About Us', 'Products', 'Work'].map((item) => (
             <Link
               key={item}
               href={
@@ -23,7 +24,12 @@ const Navbar = () => {
                   ? '/'
                   : `/${item.toLowerCase().replace(/\s+/g, '-')}`
               }
-              className="text-white text-md font-normal hover:text-gray-300 transition"
+              onClick={() => setActiveTab(item)}
+              className={`hover:text-green-600 transition ${
+                item === activeTab
+                  ? 'text-lg font-semibold text-black'
+                  : 'text-white text-md font-normal'
+              }`}
             >
               {item}
             </Link>
@@ -58,7 +64,7 @@ const Navbar = () => {
           isOpen ? 'block' : 'hidden'
         } absolute top-16 left-0 right-0 bg-gray-800 opacity-50 text-white text-center flex flex-col py-6 space-y-6 md:hidden`}
       >
-        {['Home', 'Work', 'Products', 'About Us'].map((item) => (
+        {['Home', 'About Us', 'Work', 'Products'].map((item) => (
           <Link
             key={item}
             href={

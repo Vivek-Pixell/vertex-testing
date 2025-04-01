@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className=" py-8 px-4 md:px-24 lg:px-40">
+    <section className=" py-8 px-4 md:px-24 xl:px-40">
       <div className="container">
         <div className=" lg:w-1/2 mb-6">
           <div className="mb-6">

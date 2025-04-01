@@ -11,13 +11,11 @@ import TestimonialsSection from './component/TestimonialsSection';
 import PartnersShowcase from './component/PartnersShowcase';
 import ImageSignage from './component/ImageSignage';
 import ContactForm from './component/ContactForm';
+import Navbar from './component/NavBar';
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on page reload
-  }, []);
   return (
-    <div className=" bg-gray-200">
+    <div className=" bg-gray-200 ">
       <ComA />
       <StatsSection />
       <ImageGrid />

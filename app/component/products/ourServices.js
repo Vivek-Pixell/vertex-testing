@@ -4,15 +4,15 @@ import React from 'react';
 const ourServices = () => {
   return (
     <section className=" my-16 md:my-20">
-      <div className=" mx-auto px-4 md:px-24 lg:px-40 ">
+      <div className=" mx-auto px-4 md:px-24 xl:px-40 ">
         <h4 className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px] uppercase mb-4">
           Our Services
         </h4>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl md:text-4xl xl:text-5xl xl:leading-15 font-semibold xl:tracking-tight text-gray-900">
-              Where the Beat Meets business Billboard
-            </h2>
+            <h3 className="text-3xl md:text-4xl xl:text-[55px] xl:leading-15 font-semibold xl:tracking-tight text-gray-900">
+              Where The Beat Meets business Billboard
+            </h3>
           </div>
           <div>
             <div className=" ">

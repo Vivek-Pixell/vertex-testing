@@ -12,7 +12,7 @@ const AboutUsPage = () => {
 
   return (
     <section className=" my-16 md:my-20">
-      <div className=" mx-auto px-4 md:px-24 lg:px-40 ">
+      <div className=" mx-auto px-4 md:px-24 xl:px-40 ">
         <Grid container spacing={6}>
           <Grid item xs={12} md={6}>
             <div>

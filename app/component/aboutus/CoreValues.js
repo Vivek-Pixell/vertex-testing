@@ -167,7 +167,7 @@ const CoreValues = () => {
 
   return (
     <div className="w-full py-16">
-      <div className="px-4 md:px-24 lg:px-40">
+      <div className="px-4 md:px-24 xl:px-40">
         <div className="space-y-2 mb-4 flex flex-col">
           <p className="text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
             CORE VALUES
