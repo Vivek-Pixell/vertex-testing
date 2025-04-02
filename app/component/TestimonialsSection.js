@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
                 alt={`Video thumbnail for ${currentTestimonial.name}`}
                 className="object-cover w-full max-h-[300px]"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* <div className="absolute inset-0 flex items-center justify-center">
                 <button className="bg-[#175177] hover:bg-blue-800 text-white rounded-lg p-2 px-6 transition-all duration-300 transform hover:scale-110 cursor-pointer">
                   <svg
                     width="20"
@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
                     />
                   </svg>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* Testimonial content */}

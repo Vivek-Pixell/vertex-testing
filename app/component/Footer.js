@@ -20,18 +20,21 @@ export default function Footer() {
           </p>
           <div className="flex justify-center md:justify-start space-x-3">
             <a
+              aria-label="Facebook"
               href="#"
               className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-600 hover:text-black transition-all duration-300"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
+              aria-label="Twitter (X)"
               href="#"
               className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-600 hover:text-black transition-all duration-300"
             >
               <XIcon className="w-5 h-5 " />
             </a>
             <a
+              aria-label="LinkedIn"
               href="#"
               className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-600 hover:text-black transition-all duration-300"
             >
@@ -39,6 +42,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
+              aria-label="Pinterest"
               className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-600 hover:text-black transition-all duration-300"
             >
               <Pinterest className="w-5 h-5 " />
@@ -77,13 +81,21 @@ export default function Footer() {
             © Vertex Lightco Industries 2025 | All Rights Reserved
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition">
+            <a
+              href="#"
+              title="View Terms & Conditions"
+              className="hover:text-white transition"
+            >
               Terms & Conditions
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a
+              href="#"
+              title="Read our Privacy Policy"
+              className="hover:text-white transition"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="#" title="Contact us for more information" className="hover:text-white transition">
               Contact Us
             </a>
           </div>

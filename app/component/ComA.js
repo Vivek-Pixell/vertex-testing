@@ -4,9 +4,11 @@ import Navbar from './NavBar';
 
 const ComA = () => {
   // State for carousel
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [progress, setProgress] = useState(0);
   const videoRef = useRef([]);
+  const [loading, setLoading] = useState(true);
 
   const handleTimeUpdate = () => {
     const video = videoRef.current[currentSlide];
@@ -18,10 +20,12 @@ const ComA = () => {
 
   useEffect(() => {
     setProgress(0);
+    setLoading(true);
     const video = videoRef.current[currentSlide];
     if (video) {
       video.load();
       video.currentTime = 0;
+      video.oncanplaythrough = () => setLoading(false);
       video.play();
     }
   }, [currentSlide]);
@@ -53,6 +57,10 @@ const ComA = () => {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
+          {/* Skeleton Loader */}
+          {loading && (
+            <div className="absolute inset-0 bg-gray-700 animate-pulse" />
+          )}
           <video
             ref={(el) => (videoRef.current[index] = el)}
             key={vid}
@@ -120,12 +128,12 @@ const ComA = () => {
       </div>
       {/* Carousel indicators */}
 
-      <div className=" absolute bottom-0 w-full flex justify-center mb-4 md:mb-8 space-x-2">
+      <div className=" absolute bottom-0 w-full flex justify-center mb-4 md:mb-8 space-x-2 z-50">
         {carouselVideos.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className="relative w-10 h-1 bg-white bg-opacity-50 rounded-full overflow-hidden cursor-pointer "
+            className="relative w-10 h-1 bg-white bg-opacity-50 rounded-full cursor-pointer"
             aria-label={`Go to slide ${index + 1}`}
           >
             {index === currentSlide && (

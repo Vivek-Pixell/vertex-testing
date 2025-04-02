@@ -21,7 +21,7 @@ const ourServices = () => {
                 businesBillboard advertising is a powerful marketing tool that
                 he businesses gain visibility and reach their target audienceses
               </p>
-              <button className=" flex justify-center items-center px-6 py-3 gap-2 border border-[[#013249]] text-[#013249] tracking-wider text-sm font-semibold rounded-full">
+              <button className=" flex justify-center items-center px-6 py-3 gap-2 border border-[[#013249]] text-[#013249] tracking-wider text-sm font-semibold rounded-full cursor-pointer">
                 CONTACT NOW{' '}
                 <span>
                   <svg

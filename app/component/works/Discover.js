@@ -10,6 +10,7 @@ const Discover = () => {
         alt="earth background"
         layout="fill"
         objectFit="cover"
+        priority={true}
       />
       <div className="absolute w-full h-full bottom-16 flex justify-center items-center text-white px-4">
         <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl  font-semibold">

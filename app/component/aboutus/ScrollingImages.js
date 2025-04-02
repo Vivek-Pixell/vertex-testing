@@ -68,7 +68,7 @@ const InfiniteImageScroller = () => {
         }}
         transition={{
           repeat: Infinity, // Infinite looping
-          duration: 10, // Adjust speed (lower is faster)
+          duration: 18, // Adjust speed (lower is faster)
           ease: 'linear', // Smooth continuous motion
         }}
       >

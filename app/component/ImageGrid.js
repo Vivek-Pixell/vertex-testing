@@ -1,35 +1,32 @@
 'use client';
 
+import Image from 'next/image';
+
 const services = [
   {
     title: 'OOH Media Assets',
-    image:
-      'https://images.unsplash.com/photo-1513061379709-ef0cd1695189?q=80&w=1000',
+    image: '/images/imagegrid/Area01.webp',
     description: 'Strategic placement of outdoor advertising media',
   },
   {
     title: 'Wayfinding Signages',
-    image:
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000',
+    image: '/images/imagegrid/Area02.webp',
     description: 'Intuitive navigation systems for urban spaces',
   },
   {
     title: 'Digital Screens',
-    image:
-      'https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D',
+    image: '/images/imagegrid/Area03.webp',
     description: 'High-impact digital display solutions',
   },
 
   {
     title: 'Urban Landing',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/imagegrid/Area04.webp',
     description: 'Custom-made architectural elements',
   },
   {
     title: 'Bespoke Fabrication',
-    image:
-      'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000',
+    image: '/images/imagegrid/Area05.webp',
     description: 'Custom-made architectural elements',
   },
 ];
@@ -50,9 +47,11 @@ export default function ImageGrid() {
           {services.map((service, index) => (
             <div key={index} className="group relative cursor-pointer ">
               <div className="aspect-[2/3]   overflow-hidden">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
+                  height={400}
+                  width={400}
                   className=" inset-0 h-full w-full object-cover transition-all duration-300
                     filter grayscale group-hover:grayscale-0 group-hover:scale-110"
                   loading="lazy"

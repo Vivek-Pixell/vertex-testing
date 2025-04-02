@@ -59,7 +59,7 @@ const TopLocations = () => {
     <div className="w-full py-16">
       <div className="px-4 md:px-24 xl:px-40">
         <div className="space-y-2 mb-6 flex flex-col">
-          <p className="text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
+          <p className="text-lg leading-6 font-semibold text-green-700 tracking-[1.85px]">
             TOP LOCATIONS
           </p>
         </div>
@@ -103,9 +103,7 @@ const TopLocations = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <span className="text-sm font-light text-gray-400">
-                    {location.city}
-                  </span>
+                  <span className="text-sm text-gray-600">{location.city}</span>
                 </div>
               </div>
             </div>

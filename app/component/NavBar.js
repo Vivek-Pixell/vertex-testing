@@ -1,10 +1,38 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('');
+  const pathname = usePathname();
+  console.log('xx:', pathname);
+
+  useEffect(() => {
+    // Convert pathname to the correct format
+    let page =
+      pathname === '/'
+        ? 'Home'
+        : pathname
+            .replace(/^\//, '') // Remove leading slash
+            .split(/(?=[A-Z])/) // Handle potential dashes
+            .map((word, index) =>
+              index === 0
+                ? word.toLowerCase()
+                : word.charAt(0).toUpperCase() + word.slice(1)
+            )
+            .join('');
+
+    // Map route names to menu labels
+    const tabMap = {
+      aboutUs: 'About Us',
+      products: 'Products',
+      work: 'Work',
+    };
+
+    setActiveTab(tabMap[page] || 'Home');
+  }, [pathname]);
 
   return (
     <nav className="absolute flex justify-center w-full z-50 bg-transparent transition-all duration-300 p-10 mx-auto">
@@ -16,24 +44,37 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-24">
-          {['Home', 'About Us', 'Products', 'Work'].map((item) => (
-            <Link
-              key={item}
-              href={
-                item === 'Home'
-                  ? '/'
-                  : `/${item.toLowerCase().replace(/\s+/g, '-')}`
-              }
-              onClick={() => setActiveTab(item)}
-              className={`hover:text-green-600 transition ${
-                item === activeTab
-                  ? 'text-lg font-semibold text-black'
-                  : 'text-white text-md font-normal'
-              }`}
-            >
-              {item}
-            </Link>
-          ))}
+          {['Home', 'About Us', 'Products', 'Work'].map((item) => {
+            console.log('yoo', item);
+
+            return (
+              <Link
+                key={item}
+                href={
+                  item === 'Home'
+                    ? '/'
+                    : `/${item
+                        .split(' ') // Split into words
+                        .map(
+                          (word, index) =>
+                            index === 0
+                              ? word.toLowerCase() // First word lowercase
+                              : word.charAt(0).toUpperCase() +
+                                word.slice(1).toLowerCase() // Capitalize following words
+                        )
+                        .join('')}`
+                }
+                onClick={() => setActiveTab(item)}
+                className={`hover:text-green-600 transition ${
+                  item.toLocaleLowerCase() === activeTab.toLocaleLowerCase()
+                    ? 'text-lg font-semibold text-black bg-white rounded-lg px-3'
+                    : 'text-white text-md font-normal'
+                }`}
+              >
+                {item}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Mobile Menu Button */}
