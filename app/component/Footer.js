@@ -76,7 +76,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-16 py-8">
-        <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-gray-200 text-sm">
+        <div className="flex flex-col sm:flex-row justify-evenly items-center space-y-4 sm:space-y-0 text-gray-200 text-sm">
           <p className="hidden md:block">
             © Vertex Lightco Industries 2025 | All Rights Reserved
           </p>
@@ -95,7 +95,11 @@ export default function Footer() {
             >
               Privacy Policy
             </a>
-            <a href="#" title="Contact us for more information" className="hover:text-white transition">
+            <a
+              href="#"
+              title="Contact us for more information"
+              className="hover:text-white transition"
+            >
               Contact Us
             </a>
           </div>

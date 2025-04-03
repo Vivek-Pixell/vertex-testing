@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
   const pathname = usePathname();
-  console.log('xx:', pathname);
 
   useEffect(() => {
     // Convert pathname to the correct format
@@ -29,6 +28,7 @@ const Navbar = () => {
       aboutUs: 'About Us',
       products: 'Products',
       work: 'Work',
+      contact: 'Contact',
     };
 
     setActiveTab(tabMap[page] || 'Home');
@@ -44,9 +44,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-24">
-          {['Home', 'About Us', 'Products', 'Work'].map((item) => {
-            console.log('yoo', item);
-
+          {['Home', 'About Us', 'Products', 'Work', 'Contact'].map((item) => {
             return (
               <Link
                 key={item}

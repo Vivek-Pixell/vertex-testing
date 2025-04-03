@@ -185,10 +185,10 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-full relative bg-green-500 text-black py-3 rounded-full hover:bg-green-600 transition-colors flex items-center justify-center group shadow-md cursor-pointer"
+          className="w-full relative bg-green-500 text-white py-3 rounded-full hover:bg-green-600 transition-colors flex items-center justify-center group shadow-md cursor-pointer"
           disabled={isLoading}
         >
-          <span className="text-lg font-semibold">
+          <span className="text-lg font-normal tracking-wider">
             {isLoading ? 'Sending...' : 'Send Message'}
           </span>
           <ArrowForward className="pt-1 w-5 h-5 transition-transform group-hover:translate-x-2" />
