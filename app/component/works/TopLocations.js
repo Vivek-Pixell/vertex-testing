@@ -70,9 +70,9 @@ const TopLocations = () => {
               className="flex flex-col gap-2 cursor-pointer"
               onClick={() => handleClick(location.slug)}
             >
-              <div className="h-40 rounded-2xl shadow-md">
+              <div className="relative overflow-hidden h-40 rounded-2xl shadow-md">
                 <Image
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full hover:scale-115 inset-0 transition-all duration-500 "
                   src={location.image}
                   alt={location.name}
                   width={100}

@@ -158,6 +158,10 @@ const OurProducts = () => {
             <div
               key={product.id}
               className={`grid grid-cols-1 lg:grid-cols-2  gap-16 mb-6`}
+              onMouseEnter={() => {
+                handleMouseEnter(index);
+              }}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
               {/* Image Section */}
               <div
@@ -175,10 +179,6 @@ const OurProducts = () => {
               {/* Content Section */}
               <div
                 className={` flex flex-col gap-0.5 transition-all duration-300 rounded-xl h-full ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}
-                onMouseEnter={() => {
-                  handleMouseEnter(index);
-                }}
-                onMouseLeave={() => handleMouseLeave(index)}
               >
                 <h3 className="text-3xl font-bold">{product.title}</h3>
                 <p className=" text-[18px] text-gray-400 font-normal mt-2 md:tracking-wider">
@@ -206,7 +206,7 @@ const OurProducts = () => {
                           fill="#8987A1"
                         />
                       </svg>
-                      <span className=" text-[12px] text-gray-500 font-normal">
+                      <span className=" text-[14px] text-gray-500 font-normal">
                         {location}
                       </span>
                     </div>
@@ -214,7 +214,7 @@ const OurProducts = () => {
                 </div>
 
                 {/* Get Quote Button */}
-                <button className=" cursor-pointer w-fit mt-auto rounded-full px-10 py-2 text-gray-500 border-1 border-gray-300  flex items-center justify-center gap-2">
+                <button className="mt-6 md:mt-16 lg:mt-8 xl:mt-auto cursor-pointer w-fit rounded-full px-10 py-2 text-gray-500 border-1 border-gray-300  flex items-center justify-center gap-2">
                   <span className=" text-lg text-[#475569] font-medium">
                     Get Quote
                   </span>

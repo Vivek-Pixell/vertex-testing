@@ -7,7 +7,7 @@ import XIcon from '@mui/icons-material/X';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] text-white mt-[85px] pt-16 px-4 sm:px-6 lg:px-8 rounded-t-[2.5rem]">
+    <footer className="bg-[#1A1A1A] text-white md:mt-[150px] mt-[25px] pt-16 px-4 sm:px-6 lg:px-8 rounded-t-[2.5rem]">
       <div className=" relative max-w-7xl h-[310px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* About Section */}
         <div className="space-y-6 lg:p-16">
@@ -70,7 +70,7 @@ export default function Footer() {
             )}
           </ul>
         </div>
-        <div className="absolute -top-3/6 md:left-5/12 lg:left-7/12 xl:left-7/12 bg-[#111] p-6 md:p-8 rounded-xl border border-green-500 shadow-lg hidden md:block">
+        <div className="absolute -top-4/6 md:left-5/12 lg:left-7/12 xl:left-7/12 bg-[#111] p-6 md:p-8 rounded-xl border border-green-500 shadow-lg hidden md:block">
           <ContactForm />
         </div>
       </div>

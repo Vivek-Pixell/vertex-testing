@@ -59,7 +59,7 @@ export default function ImageGrid() {
                 <div className="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-all duration-500" />
               </div>
               <div className="absolute bottom-0 left-0 right-0  p-4 transform group-hover:scale-110 transition-transform duration-500">
-                <h3 className="text-sm md:text-lg lg:text-[12px] xl:text-lg  font-medium text-white">
+                <h3 className="text-lg md:text-xl lg:text-[12px] xl:text-lg  font-medium text-white">
                   {service.title}
                 </h3>
                 {/* <p className="mt-2 text-sm text-gray-300 hidden group-hover:block">

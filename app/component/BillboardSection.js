@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function BillboardSection() {
   return (
     <section>
-      <div className=" px-4 md:px-24 xl:px-32">
+      <div className="py-12 md:py-0 px-4 md:px-24 xl:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 items-center">
           {/* Left Column - Image */}
           <div className="relative rounded-3xl lg:p-8 ">
@@ -33,7 +33,7 @@ export default function BillboardSection() {
               The Digi Cybsecure The Transfor Billbord
             </h2>
 
-            <p className="text-gray-500 text-sm py-4 mb-8 max-w-[550px]">
+            <p className="text-gray-500 text-sm py-4 mb-2 md:mb-8 max-w-[550px]">
               Billboard advertising is a powerful marketing tool that he
               businesses gain visibility and reach their target audience
               Billboard advertising is a powerful marketing tool that he
@@ -42,7 +42,7 @@ export default function BillboardSection() {
               Billboard advertising is a powerful marketing tool that he
               businesses
             </p>
-            <Link href="/about-us">
+            <Link href="/aboutUs">
               <button className="flex justify-center lg:justify-start items-center border gap-2 p-6 transition-all duration-400 py-3 rounded-full text-black hover:border-none hover:bg-[#175177] hover:text-white cursor-pointer">
                 <span className=" text-md font-normal">
                   About Vertex <ArrowForwardIcon fontSize="inherit" />

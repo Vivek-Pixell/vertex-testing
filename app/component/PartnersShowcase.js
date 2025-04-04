@@ -74,7 +74,7 @@ const PartnersShowcase = () => {
           </video>
 
           {/* Play Button */}
-          <button
+          {/* <button
             className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition duration-300"
             aria-label="Play video"
           >
@@ -92,7 +92,7 @@ const PartnersShowcase = () => {
                 />
               </svg>
             </div>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

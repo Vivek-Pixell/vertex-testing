@@ -55,9 +55,9 @@ const OtherWorks = () => {
               className=" flex flex-col gap-2"
               onClick={() => handleClick(location.slug)}
             >
-              <div className=" h-80  rounded-lg shadow-md">
+              <div className=" h-80 relative overflow-hidden  rounded-lg shadow-md">
                 <img
-                  className="object-cover w-full h-full rounded-2xl cursor-pointer"
+                  className="object-cover w-full h-full rounded-2xl hover:scale-115 transition-all duration-500 cursor-pointer"
                   src={location.image}
                   alt={location.name}
                 />

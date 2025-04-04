@@ -11,6 +11,7 @@ export default function ContactForm() {
     lastName: '',
     email: '',
     phone: '',
+    preferredTeam: '',
     message: '',
   });
 
@@ -21,6 +22,7 @@ export default function ContactForm() {
     lastName: '',
     email: '',
     phone: '',
+    preferredTeam: '',
     message: '',
   });
 
@@ -38,6 +40,9 @@ export default function ContactForm() {
       newErrors.phone = 'Phone Number must be at least 10 digits.';
     }
     if (!formData.message.trim()) newErrors.message = 'Message is required.';
+    if (!formData.preferredTeam) {
+      newErrors.preferredTeam = 'Choose a preferred team';
+    }
 
     setErrors(newErrors);
 
@@ -74,6 +79,7 @@ export default function ContactForm() {
           lastName: '',
           email: '',
           phone: '',
+          preferredTeam: '',
           message: '',
         });
         setIsLoading(false);
@@ -82,6 +88,7 @@ export default function ContactForm() {
           lastName: '',
           email: '',
           phone: '',
+          preferredTeam: '',
           message: '',
         });
       } else {
@@ -103,7 +110,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className=" lg:px-6">
+    <div className="py-4 lg:py-none xl:px-6">
       <h3 className="text-2xl font-semibold mb-6">Send Your Enquiry</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -168,6 +175,50 @@ export default function ContactForm() {
               <p className="text-red-500 text-sm">{errors.phone}</p>
             )}
           </div>
+        </div>
+        <div>
+          <select
+            className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+            value={formData.preferredTeam}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                preferredTeam: e.target.value,
+              })
+            }
+          >
+            <option value="" disabled>
+              Preferred Team For Assistance
+            </option>
+            <option className="text-gray-400" value="sales">
+              Sales
+            </option>
+            <option className="text-gray-400" value="procurement">
+              Procurement
+            </option>
+            <option className="text-gray-400" value="vendorOnboarding">
+              Vendor Onboarding
+            </option>
+            <option className="text-gray-400" value="ipOnboarding">
+              Installation Partner Onboarding
+            </option>
+
+            <option className="text-gray-400" value="afterSales">
+              After Sales
+            </option>
+            <option className="text-gray-400" value="hiring">
+              Hiring
+            </option>
+            <option className="text-gray-400" value="affilationPartnership">
+              Affiliation and Partnership
+            </option>
+            <option className="text-gray-400" value="other">
+              Other
+            </option>
+          </select>
+          {errors.lastName && (
+            <p className="text-red-500 text-sm">{errors.preferredTeam}</p>
+          )}
         </div>
         <div>
           <textarea
