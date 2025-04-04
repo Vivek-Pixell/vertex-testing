@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,10 +46,20 @@ const Navbar = () => {
 
         {/*logo*/}
 
-        <button onClick={() => router.push('/')}>
-          <svg
-            width="36"
-            height="36"
+        <div
+          className=" cursor-pointer h-8 w-8"
+          onClick={() => router.push('/')}
+        >
+          <Image
+            src="/images/vertex-logo.webp"
+            alt="logo"
+            width={45}
+            height={45}
+            className=""
+          />
+          {/* <svg
+            width="50"
+            height="50"
             viewBox="0 0 36 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +75,8 @@ const Navbar = () => {
               d="M14.1961 10.3711H7L10.5987 15.5217L14.1961 10.3711ZM15.515 22.5579L17.5 25.3989L28 10.3711H24.0267L15.515 22.5579Z"
               fill="white"
             />
-          </svg>
-        </button>
+          </svg> */}
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center mx-auto space-x-10 xl:space-x-24">

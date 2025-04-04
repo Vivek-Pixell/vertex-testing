@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import Grid from '@mui/material/Grid';
+import { useRouter } from 'next/navigation';
+
 const headings = [
   'More than 1000 successful cases',
   '10 years experience',
@@ -21,6 +23,8 @@ export default function StatsSection() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const router = useRouter();
 
   return (
     <section className=" my-12 md:my-20">
@@ -42,7 +46,10 @@ export default function StatsSection() {
                 Semper tellus feugiat sit pellentesque scelerisque hendrerit
                 vulputate quam nunc.
               </p>
-              <button className="flex items-center text-[#175177]  cursor-pointer my-8 ">
+              <button
+                className="flex items-center text-[#175177] hover:scale-105 transition-all duration-500 cursor-pointer my-8 "
+                onClick={() => router.push('/aboutUs')}
+              >
                 <span className="mr-4 text-sm font-medium">More about us </span>
                 <svg
                   width="55"
