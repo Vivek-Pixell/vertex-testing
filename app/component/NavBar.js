@@ -17,17 +17,17 @@ const Navbar = () => {
         ? 'Home'
         : pathname
             .replace(/^\//, '') // Remove leading slash
-            .split(/(?=[A-Z])/) // Handle potential dashes
+            .split(/(?=[A-Z])/) // Optional capital-split
             .map((word, index) =>
               index === 0
                 ? word.toLowerCase()
                 : word.charAt(0).toUpperCase() + word.slice(1)
-            )
-            .join('');
+            )[0] // Take first segment
+            .split('/')[0]; // Extract first "folder" like "work"
 
     // Map route names to menu labels
     const tabMap = {
-      aboutUs: 'About Us',
+      about: 'About Us',
       products: 'Products',
       work: 'Work',
       contact: 'Contact',
@@ -37,7 +37,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className="absolute flex justify-center w-full z-50 bg-transparent transition-all duration-300 p-10 mx-auto">
+    <nav className="absolute flex justify-center w-full z-50 bg-transparent transition-all duration-300 p-4 md:p-10 mx-auto">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         {/* <div className="text-white text-xl font-bold">
@@ -47,7 +47,7 @@ const Navbar = () => {
         {/*logo*/}
 
         <div
-          className=" cursor-pointer h-8 w-8"
+          className=" cursor-pointer h-10 w-10 md:h-12 md:w-12"
           onClick={() => router.push('/')}
         >
           <Image
@@ -138,8 +138,39 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } absolute m-2 rounded-2xl top-16 left-0 right-0 bg-gray-800 opacity-50 text-white text-center flex flex-col py-2 space-y-4 md:hidden`}
+        } absolute z-50 h-[50vh] top-18 mx-6 rounded-2xl  left-0 right-0 bg-white opacity-95 text-gray-800 text-center flex flex-col py-2 space-y-4 md:hidden transition-all duration-500`}
       >
+        {/* <div className=" mx-4 my-2 flex justify-between">
+          <div
+            className=" cursor-pointer h-12 w-12"
+            onClick={() => router.push('/')}
+          >
+            <Image
+              src="/images/vertex-logo.webp"
+              alt="logo"
+              width={40}
+              height={40}
+              className=""
+            />
+          </div>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <svg
+              className="w-10 h-10"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div> */}
+
         {['Home', 'About Us', 'Products', 'Work', 'Contact'].map((item) => {
           return (
             <Link
@@ -162,7 +193,7 @@ const Navbar = () => {
                 setActiveTab(item);
                 setIsOpen(false);
               }}
-              className={`m-4 rounded-2xl	text-white text-md font-normal hover:text-gray-300 transition ${item === activeTab ? ' bg-gray-400' : ''}`}
+              className={`m-4 rounded-2xl text-md  hover:text-gray-300 transition ${item === activeTab ? ' text-xl font-bold' : 'font-normal'}`}
             >
               {item}
             </Link>

@@ -30,22 +30,21 @@ const WorkDetail = () => {
   };
 
   return (
-    <div>
-      <div className=" flex w-full relative">
-        <div className=" relative  w-full">
+    <div className="">
+      <div className=" flex w-full">
+        <div className=" relative h-[17vh]  w-full">
           <Image
             src="/images/image 73.webp"
             alt="earth background"
             layout="fill"
             objectFit="cover"
           />
-          <NavBar />
         </div>
       </div>
       <div className="w-full py-16">
         <div className="px-4 md:px-24 xl:px-40">
           <div className=" sticky top-0 z-10 bg-white pb-4">
-            <div className=" flex gap-4 items-center">
+            <div className=" flex gap-4 pt-6 items-center">
               <Image
                 src="/icons/arrow_back.svg"
                 alt="arrowbackicon"
@@ -61,7 +60,7 @@ const WorkDetail = () => {
               </h1>
             </div>
 
-            <div className="mt-4 flex text-sm md:text-lg justify-center overflow-scroll md:overflow-visible mx-auto">
+            <div className="mt-4 flex text-sm md:text-lg md:justify-center overflow-scroll md:overflow-visible mx-auto">
               {categories.map((category, index) => (
                 <div
                   key={category.slug}

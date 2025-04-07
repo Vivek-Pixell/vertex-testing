@@ -63,7 +63,7 @@ const TopLocations = () => {
             TOP LOCATIONS
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
           {topLocationData.map((location) => (
             <div
               key={location.id}

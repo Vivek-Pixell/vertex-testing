@@ -176,9 +176,9 @@ export default function ContactForm() {
             )}
           </div>
         </div>
-        <div>
+        <div className="relative w-full">
           <select
-            className="bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
+            className="appearance-none bg-transparent border placeholder-white placeholder:font-light w-full border-gray-700 rounded-xl p-3 pr-10 focus:outline-none focus:border-green-500 transition focus:ring-2 focus:ring-green-500"
             value={formData.preferredTeam}
             onChange={(e) =>
               setFormData({
@@ -202,7 +202,6 @@ export default function ContactForm() {
             <option className="text-gray-400" value="ipOnboarding">
               Installation Partner Onboarding
             </option>
-
             <option className="text-gray-400" value="afterSales">
               After Sales
             </option>
@@ -216,10 +215,25 @@ export default function ContactForm() {
               Other
             </option>
           </select>
-          {errors.lastName && (
-            <p className="text-red-500 text-sm">{errors.preferredTeam}</p>
-          )}
+
+          {/* Custom dropdown arrow */}
+          <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+            <svg
+              className="w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
         </div>
+
         <div>
           <textarea
             placeholder="Write Message"
