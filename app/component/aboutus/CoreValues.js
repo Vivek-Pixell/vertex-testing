@@ -205,7 +205,7 @@ const CoreValues = () => {
                       alt={value.title}
                       height={300}
                       width={300}
-                      className=" w-full h-full  rounded-2xl"
+                      className="  rounded-2xl"
                     />
                   )}
                 </div>
@@ -233,7 +233,7 @@ const CoreValues = () => {
                     alt={value.title}
                     height={300}
                     width={300}
-                    className=" w-full h-full  rounded-2xl"
+                    className="  rounded-2xl"
                   />
                 )}
               </div>
