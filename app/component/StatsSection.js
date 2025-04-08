@@ -50,7 +50,7 @@ export default function StatsSection() {
                 className="flex items-center text-[#175177] hover:scale-105 transition-all duration-500 cursor-pointer my-8 "
                 onClick={() => router.push('/aboutUs')}
               >
-                <span className="mr-4 text-sm font-medium">More about us </span>
+                <span className="mr-4 text-lg font-medium">More about us </span>
                 <svg
                   width="55"
                   height="13"

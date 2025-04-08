@@ -37,7 +37,7 @@ export default function ImageGrid() {
       <div className="px-4 md:px-24 xl:px-40 ">
         <div className="space-y-2 flex flex-col ">
           <p className=" text-lg leading-6 font-semibold text-[#5EB652] tracking-[1.85px]">
-            TESTIMONIALS
+            PRODUCTS
           </p>
           <h2 className=" md:text-4xl lg:text-5xl  text-3xl font-normal md:tracking-tight md:leading-[65px] text-gray-900">
             What We Offer To Our <br /> Clients
